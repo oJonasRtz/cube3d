@@ -6,7 +6,7 @@
 /*   By: jopereir <jopereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 12:55:55 by jopereir          #+#    #+#             */
-/*   Updated: 2025/04/21 12:57:44 by jopereir         ###   ########.fr       */
+/*   Updated: 2025/04/21 17:57:16 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,12 @@ typedef struct s_game
 	int		player_x;
 	int		player_y;
 	char	**maps;
+	int	no_texture_index;
+	int	so_texture_index;
+	int	we_texture_index;
+	int	ea_texture_index;
+	int	floor_colours_index;
+	int	ceiling_colours_index;
 }	t_game;
 
 #endif
