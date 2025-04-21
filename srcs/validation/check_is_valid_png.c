@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/20 11:08:55 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/21 12:58:32 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/21 12:59:32 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static int	check_png(char *file_path)
 		if (file_path[index] == '.')
 		{
 			substr = ft_substr(file_path, index, length - index);
-			if (ft_strncmp(substr, ".png") == 0)
+			if (ft_strncmp(substr, ".png", 4) == 0)
 			{
 				free(substr);
 				return (1);
