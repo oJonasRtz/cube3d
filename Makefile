@@ -67,7 +67,7 @@ $(NAME): $(OBJS)
 
 %.o:%.c
 	@echo "\033[38;5;208mCompiling	->	$<\033[0m"
-	@$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) -I $(INCDIR) -c $< -o $@
 
 #clean
 
