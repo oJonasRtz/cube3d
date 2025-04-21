@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/19 09:45:39 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/21 17:13:14 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/21 19:14:00 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ int	get_ceiling_colours(t_game *game)
 			&& game->maps[index][0] == 'C')
 		{
 			get_c_colours = ft_split(game->maps[index], ' ');
+			if (!check_split_length(get_c_colours))
+				return (free_dynamic_texture(get_c_colours));
 			game->ceiling_colours = ft_strdup(get_c_colours[1]);
 			if (!game->ceiling_colours)
 			{

@@ -6,7 +6,7 @@
 /*   By: jopereir <jopereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 12:53:42 by jopereir          #+#    #+#             */
-/*   Updated: 2025/04/21 17:55:00 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/21 19:05:24 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,6 @@ int		flood_fill(t_game *game);
 int		check_security_on_map(t_game *game);
 int		check_is_anything_equal(t_game *game);
 int		check_repeat_textures(t_game *game);
+int		check_split_length(char **split);
 
 #endif
