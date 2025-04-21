@@ -52,6 +52,7 @@ SRCS =  $(SRCDIR)/cub3d/main.c\
 	$(SRCDIR)/set_window/set_window.c\
 	$(SRCDIR)/set_window/render.c\
 	$(SRCDIR)/set_window/run_window.c\
+	$(SRCDIR)/validation/check_security_on_map.c\
 	$(SRCDIR)/cub3d/destroy.c
 
 #OBJS

@@ -6,7 +6,7 @@
 /*   By: jopereir <jopereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 12:53:42 by jopereir          #+#    #+#             */
-/*   Updated: 2025/04/21 12:57:49 by jopereir         ###   ########.fr       */
+/*   Updated: 2025/04/21 16:41:12 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,6 @@ int		check_first_last_wall(t_game *game, int index);
 size_t	get_all_lines(t_game *game);
 int		check_invalid_access(t_game *game);
 int		flood_fill(t_game *game);
+int		check_security_on_map(t_game *game);
 
 #endif
