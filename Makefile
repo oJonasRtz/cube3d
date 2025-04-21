@@ -50,6 +50,7 @@ SRCS =  $(SRCDIR)/cub3d/main.c\
 	$(SRCDIR)/validation/flood_fill.c\
 	$(SRCDIR)/utils/drawstr.c\
 	$(SRCDIR)/set_window/set_window.c\
+	$(SRCDIR)/set_window/render.c\
 	$(SRCDIR)/set_window/run_window.c\
 	$(SRCDIR)/cub3d/destroy.c
 
