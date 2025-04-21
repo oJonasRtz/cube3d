@@ -47,7 +47,11 @@ SRCS =  $(SRCDIR)/cub3d/main.c\
 	$(SRCDIR)/validation/check_entire_wall.c\
 	$(SRCDIR)/validation/check_first_last_wall.c\
 	$(SRCDIR)/validation/check_invalid_access.c\
-	$(SRCDIR)/validation/flood_fill.c
+	$(SRCDIR)/validation/flood_fill.c\
+	$(SRCDIR)/utils/drawstr.c\
+	$(SRCDIR)/set_window/set_window.c\
+	$(SRCDIR)/set_window/run_window.c\
+	$(SRCDIR)/cub3d/destroy.c
 
 #OBJS
 

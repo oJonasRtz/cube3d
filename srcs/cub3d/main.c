@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jopereir <jopereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 18:29:29 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/19 20:32:21 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/21 13:36:31 by jopereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,7 @@ int	main(int argc, char **argv)
 		return (ft_putendl_fd_1("Init Error", 2));
 	}
 	show_textures(&game);
-	return (free_game(&game));
+	set_window(&game);
+	run_window(&game);
+	return (destroy(&game));
 }
