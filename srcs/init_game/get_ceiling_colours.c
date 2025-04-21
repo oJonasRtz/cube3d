@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_NO_texture.c                                   :+:      :+:    :+:   */
+/*   get_ceiling_colours.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/19 09:45:39 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/19 09:45:39 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/21 17:13:14 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	get_ceiling_colours(t_game *game)
 	while (game->maps[index] != NULL)
 	{
 		if (game->maps[index][0] && game->maps[index][1]
-			&& game->maps[index][0] == 'F')
+			&& game->maps[index][0] == 'C')
 		{
 			get_c_colours = ft_split(game->maps[index], ' ');
 			game->ceiling_colours = ft_strdup(get_c_colours[1]);
