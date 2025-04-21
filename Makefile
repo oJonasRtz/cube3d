@@ -82,6 +82,9 @@ clean:
 	@rm -rf $(OBJS)
 	@$(MAKE) -C $(LIBFT_DIR) clean --no-print-directory
 
+run: all
+	valgrind --show-leak-kinds=all --leak-check=full ./cub3d maps/test_map4.cub
+
 #fclean
 
 fclean: clean
