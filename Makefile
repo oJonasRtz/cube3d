@@ -57,6 +57,7 @@ SRCS =  $(SRCDIR)/cub3d/main.c\
 	$(SRCDIR)/validation/check_repeat_textures.c\
 	$(SRCDIR)/validation/check_split_length.c\
 	$(SRCDIR)/utils/free_dynamic_texture.c\
+	$(SRCDIR)/validation/remove_spaces_and_tabs.c\
 	$(SRCDIR)/cub3d/destroy.c
 
 #OBJS
