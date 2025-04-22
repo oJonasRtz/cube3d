@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 10:35:43 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/22 11:45:30 by jonas            ###   ########.fr       */
+/*   Updated: 2025/04/22 11:59:54 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static char	*do_magic(char *str, int *flag)
 		*flag = 0;
 		return (NULL);
 	}
-	new_str = (char *)malloc(length);
+	new_str = (char *)malloc(length + 1);
 	if (!new_str)
 		return (NULL);
 	index = 0;
