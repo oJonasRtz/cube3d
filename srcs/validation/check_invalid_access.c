@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_invalid_access.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fruan-ba <fruan-ba@42sp.org.br>            +#+  +:+       +#+        */
+/*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/20 18:21:24 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/20 18:33:37 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/22 11:45:11 by jonas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 int	check_invalid_access(t_game *game)
 {
-	int	lines;
+	// int	lines;
 	int	index;
 	int	count;
 
-	lines = get_all_lines(game);
+	// lines = get_all_lines(game);
 	index = 1;
 	while (game->true_game_map[index] != NULL)
 	{

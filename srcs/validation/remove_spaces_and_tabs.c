@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   remove_spaces_and_tabs.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 10:35:43 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/22 11:17:13 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/22 11:45:30 by jonas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 static int	is_only_spaces(char *str)
 {
 	int	index;
-	int	flag;
+	// int	flag;
 
 	index = 0;
-	flag = 1;
+	// flag = 1;
 	while (str[index] != '\0')
 	{
 		if (str[index] != ' ' && str[index] != '\t'
