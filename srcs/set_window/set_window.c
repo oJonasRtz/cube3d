@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 13:02:35 by jopereir          #+#    #+#             */
-/*   Updated: 2025/04/22 11:49:37 by jonas            ###   ########.fr       */
+/*   Updated: 2025/04/22 12:22:53 by jonas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,7 @@ int	set_window(t_game *game)
 	int	win_w;
 	int	win_h;
 
-	if (!game)
-		return (1);
-	if (init_mlx(game))
+	if (!game || init_mlx(game))
 		return (1);
 	win_w = 1920;
 	win_h = 1080;

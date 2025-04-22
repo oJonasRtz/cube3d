@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 18:29:29 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/22 11:57:25 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/22 12:02:20 by jonas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ int	main(int argc, char **argv)
 		return (ft_putendl_fd_1("Init Error", 2));
 	}
 	show_textures(&game);
-	//run_window(&game);
+	run_window(&game);
 	return (destroy(&game));
 }
