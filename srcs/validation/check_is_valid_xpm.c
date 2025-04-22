@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_is_valid_png.c                               :+:      :+:    :+:   */
+/*   check_is_valid_xpm.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/20 11:08:55 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/22 12:26:14 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/22 12:56:46 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static int	check_xpm(char *file_path)
 			free(substr);
 		index++;
 	}
-	return (ft_putendl_fd_0("File without .xpm file", 2));
+	return (ft_putendl_fd_0("Error: file without .xpm file", 2));
 }
 
 int	check_is_valid_xpm(t_game *game)

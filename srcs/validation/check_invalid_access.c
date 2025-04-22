@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/20 18:21:24 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/22 12:45:38 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/22 12:55:51 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	check_invalid_access(t_game *game)
 		{
 			if (game->true_game_map[index][count] == '0'
 				&& game->true_game_map[index - 1][count] == ' ')
-				return (ft_putendl_fd_0("Invalid access", 2));
+				return (ft_putendl_fd_0("Error: HOLE!", 2));
 			count++;
 		}
 		index++;
