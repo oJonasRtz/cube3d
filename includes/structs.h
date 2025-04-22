@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   structs.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 12:55:55 by jopereir          #+#    #+#             */
-/*   Updated: 2025/04/22 15:04:57 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/22 15:23:43 by jonas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,15 @@
 # include "cub3d.h"
 # define TILE_SIZE 64
 
+typedef struct s_mlx
+{
+	void	*mlx_ptr;
+	void	*win;
+}	t_mlx;
+
 typedef struct s_game
 {
-	void	*mlx;
-	void	*win;
+	t_mlx	mlx;
 	char	*no_texture;
 	char	*so_texture;
 	char	*we_texture;

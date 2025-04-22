@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 20:21:08 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/22 12:41:03 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/22 15:27:37 by jonas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	init_game(const char *filename, t_game *game)
 		return (0);
 	if (!is_valid_map(game))
 		return (0);
-	if (set_window(game))
+	if (set_window(&game->mlx))
 		return (0);
 	return (1);
 }
