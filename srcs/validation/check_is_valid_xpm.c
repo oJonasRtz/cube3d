@@ -6,13 +6,13 @@
 /*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/20 11:08:55 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/21 12:59:32 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/22 12:26:14 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/cub3d.h"
 
-static int	check_png(char *file_path)
+static int	check_xpm(char *file_path)
 {
 	size_t	index;
 	char	*substr;
@@ -26,7 +26,7 @@ static int	check_png(char *file_path)
 		if (file_path[index] == '.')
 		{
 			substr = ft_substr(file_path, index, length - index);
-			if (ft_strncmp(substr, ".png", 4) == 0)
+			if (ft_strncmp(substr, ".xpm", 4) == 0)
 			{
 				free(substr);
 				return (1);
@@ -36,18 +36,18 @@ static int	check_png(char *file_path)
 			free(substr);
 		index++;
 	}
-	return (ft_putendl_fd_0("File without .png file", 2));
+	return (ft_putendl_fd_0("File without .xpm file", 2));
 }
 
-int	check_is_valid_png(t_game *game)
+int	check_is_valid_xpm(t_game *game)
 {
-	if (!check_png(game->no_texture))
+	if (!check_xpm(game->no_texture))
 		return (0);
-	if (!check_png(game->so_texture))
+	if (!check_xpm(game->so_texture))
 		return (0);
-	if (!check_png(game->we_texture))
+	if (!check_xpm(game->we_texture))
 		return (0);
-	if (!check_png(game->ea_texture))
+	if (!check_xpm(game->ea_texture))
 		return (0);
 	return (1);
 }

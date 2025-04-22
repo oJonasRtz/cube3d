@@ -1,12 +1,12 @@
-NO ./images/n.png
+NO ./images/n.xpm
 
-SO ./images/s.png
+SO ./images/s.xpm
 
-WE ./images/w.png
+WE ./images/w.xpm
 
 
 
-EA ./images/e.png
+EA ./images/e.xpm
 
 
 

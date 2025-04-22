@@ -6,7 +6,7 @@
 /*   By: jopereir <jopereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/19 15:53:26 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/21 18:04:06 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/22 12:29:48 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static int	check_textures(t_game *game)
 		return (ft_putendl_fd_0("Anything null found!", 2));
 	if (!check_colours(game))
 		return (ft_putendl_fd_0("RGB Colours Error!", 2));
-	if (!check_is_valid_png(game))
+	if (!check_is_valid_xpm(game))
 		return (ft_putendl_fd_0("Invalid texture files!", 2));
 	return (1);
 }

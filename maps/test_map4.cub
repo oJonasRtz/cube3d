@@ -1,10 +1,10 @@
-NO ./images/minimcal.png
+NO ./images/minimcal.xpm
 
-SO ./images/minimbal.png
+SO ./images/minimbal.xpm
 
-WE ./images/minimaal.png
+WE ./images/minimaal.xpm
 
-EA ./images/minimdal.png
+EA ./images/minimdal.xpm
 
 F 200,200,200
 C 200,200,200

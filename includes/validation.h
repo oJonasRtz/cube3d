@@ -6,7 +6,7 @@
 /*   By: jopereir <jopereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 12:53:42 by jopereir          #+#    #+#             */
-/*   Updated: 2025/04/22 11:05:15 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/22 12:28:38 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int		is_anything_null(t_game *game);
 int		is_valid_map(t_game *game);
 int		check_colours(t_game *game);
 int		check_true_map(t_game *game);
-int		check_is_valid_png(t_game *game);
+int		check_is_valid_xpm(t_game *game);
 int		check_elements(t_game *game);
 int		check_entire_wall(t_game *game, int index);
 int		check_first_last_wall(t_game *game, int index);
