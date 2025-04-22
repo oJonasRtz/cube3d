@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 10:35:43 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/22 11:59:54 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/22 12:46:14 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,8 @@
 static int	is_only_spaces(char *str)
 {
 	int	index;
-	// int	flag;
 
 	index = 0;
-	// flag = 1;
 	while (str[index] != '\0')
 	{
 		if (str[index] != ' ' && str[index] != '\t'
