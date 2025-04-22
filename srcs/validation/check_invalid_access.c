@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/20 18:21:24 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/22 11:45:11 by jonas            ###   ########.fr       */
+/*   Updated: 2025/04/22 12:45:38 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,9 @@
 
 int	check_invalid_access(t_game *game)
 {
-	// int	lines;
 	int	index;
 	int	count;
 
-	// lines = get_all_lines(game);
 	index = 1;
 	while (game->true_game_map[index] != NULL)
 	{
