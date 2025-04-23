@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   structs.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
+/*   By: jopereir <jopereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 12:55:55 by jopereir          #+#    #+#             */
-/*   Updated: 2025/04/23 11:37:00 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/23 12:01:50 by jopereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,23 @@ typedef struct s_mlx
 	void	*win;
 }	t_mlx;
 
+typedef struct s_player
+{
+	int	x;
+	int	y;
+	int	angle;
+}	t_player;
+
+typedef struct s_map
+{
+	char		**map;
+	t_player	player;
+}	t_map;
+
 typedef struct s_game
 {
 	t_mlx	mlx;
+	t_map	map;
 	char	*no_texture;
 	char	*so_texture;
 	char	*we_texture;
