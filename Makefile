@@ -62,6 +62,7 @@ SRCS =  $(SRCDIR)/cub3d/main.c\
 	$(SRCDIR)/init_game/rgb_to_rrggbb.c\
 	$(SRCDIR)/bonus/minimap.c\
 	$(SRCDIR)/utils/get_t_game.c\
+	$(SRCDIR)/ray_cast/init_map.c\
 	$(SRCDIR)/cub3d/destroy.c
 
 #OBJS

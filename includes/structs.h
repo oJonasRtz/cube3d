@@ -6,7 +6,7 @@
 /*   By: jopereir <jopereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 12:55:55 by jopereir          #+#    #+#             */
-/*   Updated: 2025/04/23 12:01:50 by jopereir         ###   ########.fr       */
+/*   Updated: 2025/04/23 12:33:54 by jopereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,12 @@
 # include <limits.h>
 # include "cub3d.h"
 # define TILE_SIZE 64
+
+typedef struct s_angle
+{
+	char	dir;
+	int		angle;
+}	t_angle;
 
 typedef struct s_mlx
 {
@@ -32,7 +38,7 @@ typedef struct s_player
 
 typedef struct s_map
 {
-	char		**map;
+	char		***map;
 	t_player	player;
 }	t_map;
 
