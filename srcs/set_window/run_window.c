@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 13:21:48 by jopereir          #+#    #+#             */
-/*   Updated: 2025/04/23 15:18:27 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/23 17:07:45 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,18 +17,42 @@ static int	handle_no_event(void)
 	return (0);
 }
 
+static void	check_the_pos(int pos, t_game *game, char c)
+{
+	int	px;
+	int	py;
+	int	map_x;
+	int	map_y;
+
+	px = game->offset_x + (game->width / 2);
+	py = game->offset_y + (game->heigth / 2);
+	if (c == 'x')
+		px = pos + (game->width / 2);
+	else if (c == 'y')
+		py = pos + (game->heigth / 2);
+	map_x = px / TILE_SIZE;
+	map_y = py / TILE_SIZE;
+	if (game->true_game_map[map_y][map_x] != '1')
+	{
+		if (c == 'x')
+			game->offset_x = pos;
+		else if (c == 'y')
+			game->offset_y = pos;
+	}
+}
+
 static int	handle_input(int key, t_game *game)
 {
 	if (key == 65307)
 		destroy(game);
 	if (key == 65361)
-		game->offset_x -= TILE_SIZE;
+		check_the_pos(game->offset_x - TILE_SIZE, game, 'x');
 	if (key == 65362)
-		game->offset_y -= TILE_SIZE;
+		check_the_pos(game->offset_y - TILE_SIZE, game, 'y');
 	if (key == 65363)
-		game->offset_x += TILE_SIZE;
+		check_the_pos(game->offset_x + TILE_SIZE, game, 'x');
 	if (key == 65364)
-		game->offset_y += TILE_SIZE;
+		check_the_pos(game->offset_y + TILE_SIZE, game, 'y');
 	mlx_clear_window(game->mlx.mlx_ptr, game->mlx.win);
 	game->min_row = game->offset_y / TILE_SIZE;
 	game->min_col = game->offset_x / TILE_SIZE;

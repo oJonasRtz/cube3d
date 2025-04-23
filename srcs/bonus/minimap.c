@@ -6,13 +6,13 @@
 /*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 10:04:13 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/23 15:34:19 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/23 17:17:23 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/cub3d.h"
 
-static void	show_the_art_to_godness(t_game *game, int s_y, int s_x, int color)
+static void	show_the_art_to_godness(t_game *game, int s_y, int s_x, int c)
 {
 	int	y;
 	int	x;
@@ -21,8 +21,8 @@ static void	show_the_art_to_godness(t_game *game, int s_y, int s_x, int color)
 	s_x *= TILE_SIZE;
 	s_y -= game->offset_y;
 	s_x -= game->offset_x;
-	if (!color)
-		color = 0x0000f6;
+	if (!c)
+		c = 0x0000f6;
 	y = 0;
 	while (y < TILE_SIZE)
 	{
@@ -30,7 +30,7 @@ static void	show_the_art_to_godness(t_game *game, int s_y, int s_x, int color)
 		while (x < TILE_SIZE)
 		{
 			mlx_pixel_put(game->mlx.mlx_ptr, game->mlx.win,
-				s_x + x, s_y + y, color);
+				s_x + x, s_y + y, c);
 			x++;
 		}
 		y++;
