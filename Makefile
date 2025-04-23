@@ -60,6 +60,7 @@ SRCS =  $(SRCDIR)/cub3d/main.c\
 	$(SRCDIR)/validation/remove_spaces_and_tabs.c\
 	$(SRCDIR)/init_game/get_width_heigth.c\
 	$(SRCDIR)/init_game/rgb_to_rrggbb.c\
+	$(SRCDIR)/bonus/minimap.c\
 	$(SRCDIR)/cub3d/destroy.c
 
 #OBJS

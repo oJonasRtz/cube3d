@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 18:29:29 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/22 13:35:01 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/23 11:23:02 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,6 @@ int	main(int argc, char **argv)
 		destroy(&game);
 	show_textures(&game);
 	run_window(&game);
+	minimap(&game);
 	return (destroy(&game));
 }
