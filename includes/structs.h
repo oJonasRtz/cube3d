@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 12:55:55 by jopereir          #+#    #+#             */
-/*   Updated: 2025/04/23 13:04:53 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/23 13:23:24 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,8 @@ typedef struct s_game
 	int		invalid_map;
 	int		player_x;
 	int		player_y;
+	int		offset_x;
+	int		offset_y;
 	char	**maps;
 	int		no_texture_index;
 	int		so_texture_index;
