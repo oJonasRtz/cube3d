@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   structs.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jopereir <jopereir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 12:55:55 by jopereir          #+#    #+#             */
-/*   Updated: 2025/04/23 12:33:54 by jopereir         ###   ########.fr       */
+/*   Updated: 2025/04/23 13:04:53 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,8 +70,8 @@ typedef struct s_game
 	int		ceiling_colours_index;
 }	t_game;
 
-int		free_dynamic_texture(char **split);
-int		rgb_to_rrggbb(t_game *game);
-int		minimap(t_game *game);
+int			free_dynamic_texture(char **split);
+int			rgb_to_rrggbb(t_game *game);
+void		minimap(t_game *game);
 
 #endif
