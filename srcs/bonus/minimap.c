@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 10:04:13 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/23 12:59:23 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/23 15:34:19 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,10 @@ static void	show_the_art_to_godness(t_game *game, int s_y, int s_x, int color)
 
 	s_y *= TILE_SIZE;
 	s_x *= TILE_SIZE;
+	s_y -= game->offset_y;
+	s_x -= game->offset_x;
 	if (!color)
-		color = 0x000000;
+		color = 0x0000f6;
 	y = 0;
 	while (y < TILE_SIZE)
 	{
@@ -29,6 +31,31 @@ static void	show_the_art_to_godness(t_game *game, int s_y, int s_x, int color)
 		{
 			mlx_pixel_put(game->mlx.mlx_ptr, game->mlx.win,
 				s_x + x, s_y + y, color);
+			x++;
+		}
+		y++;
+	}
+}
+
+static void	draw_the_player(t_game *game)
+{
+	int	new_player_x_location;
+	int	new_player_y_location;
+	int	color;
+	int	x;
+	int	y;
+
+	new_player_x_location = (game->width / 2) - (TILE_SIZE / 4);
+	new_player_y_location = (game->heigth / 2) - (TILE_SIZE / 4);
+	color = COLOUR_PLAYER;
+	y = 0;
+	while (y < TILE_SIZE / 2)
+	{
+		x = 0;
+		while (x < TILE_SIZE / 2)
+		{
+			mlx_pixel_put(game->mlx.mlx_ptr, game->mlx.win,
+				x + new_player_x_location, y + new_player_y_location, color);
 			x++;
 		}
 		y++;
@@ -51,14 +78,14 @@ void	minimap(t_game *game)
 			c = game->true_game_map[index][count];
 			if (c == '1')
 				color = COLOUR_WALL;
-			else if (c == '0')
+			else if (c == '0' || c == 'N' || c == 'W' || c == 'E'
+				|| c == 'S')
 				color = COLOUR_FLOOR;
-			else if (c == 'N' || c == 'W' || c == 'E' || c == 'S')
-				color = COLOUR_PLAYER;
 			if (c != '\n')
 				show_the_art_to_godness(game, index, count, color);
 			count++;
 		}
 		index++;
 	}
+	draw_the_player(game);
 }
