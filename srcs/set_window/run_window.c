@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 13:21:48 by jopereir          #+#    #+#             */
-/*   Updated: 2025/04/23 14:24:07 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/23 14:38:46 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,6 @@ static int	handle_no_event(void)
 
 static int	handle_input(int key, t_game *game)
 {
-	int	max_offset_x;
-	int	max_offset_y;
-
-	max_offset_x = (game->width * TILE_SIZE) - game->width;
-	max_offset_y = (game->heigth * TILE_SIZE) - game->heigth;
 	if (key == 65307)
 		destroy(game);
 	if (key == 65361)
@@ -34,8 +29,9 @@ static int	handle_input(int key, t_game *game)
 		game->offset_x += TILE_SIZE;
 	if (key == 65364)
 		game->offset_y += TILE_SIZE;
-	if (game->offset_x > max_offset_x || game->offset_y > max_offset_y)
+	if (game->offset_x > game->width || game->offset_y > game->heigth)
 		return (1);
+	mlx_clear_window(game->mlx.mlx_ptr, game->mlx.win);
 	minimap(game);
 	return (0);
 }

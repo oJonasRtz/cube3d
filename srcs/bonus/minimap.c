@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 10:04:13 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/23 13:51:33 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/23 14:35:07 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static void	show_the_art_to_godness(t_game *game, int s_y, int s_x, int color)
 	s_y -= game->offset_y;
 	s_x -= game->offset_x;
 	if (!color)
-		color = 0x0000fa;
+		color = 0x0000f6;
 	y = 0;
 	while (y < TILE_SIZE)
 	{
