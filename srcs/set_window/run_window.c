@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 13:21:48 by jopereir          #+#    #+#             */
-/*   Updated: 2025/04/22 15:26:42 by jonas            ###   ########.fr       */
+/*   Updated: 2025/04/23 11:38:50 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,6 @@ void	run_window(t_game *game)
 	mlx_loop_hook(game->mlx.mlx_ptr, &handle_no_event, NULL);
 	mlx_key_hook(game->mlx.win, &handle_input, game);
 	mlx_hook(game->mlx.win, 17, 0, &destroy, game);
+	minimap(game);
 	mlx_loop(game->mlx.mlx_ptr);
 }

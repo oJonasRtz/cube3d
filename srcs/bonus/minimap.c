@@ -6,13 +6,13 @@
 /*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 10:04:13 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/23 11:24:07 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/23 11:37:47 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/cub3d.h"
 
-void	minimap(t_game *game)
+int	minimap(t_game *game)
 {
 	int		index;
 	int		count;
@@ -20,7 +20,6 @@ void	minimap(t_game *game)
 	char	c;
 
 	index = 0;
-	color = 0x000000;
 	while (game->true_game_map[index] != NULL)
 	{
 		count = 0;
@@ -39,4 +38,5 @@ void	minimap(t_game *game)
 		}
 		index++;
 	}
+	return (0);
 }

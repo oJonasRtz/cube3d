@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 12:55:55 by jopereir          #+#    #+#             */
-/*   Updated: 2025/04/23 10:46:27 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/23 11:37:00 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,6 @@ typedef struct s_game
 
 int		free_dynamic_texture(char **split);
 int		rgb_to_rrggbb(t_game *game);
-void	minimap(t_game *game);
+int		minimap(t_game *game);
 
 #endif

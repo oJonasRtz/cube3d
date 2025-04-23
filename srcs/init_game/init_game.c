@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 20:21:08 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/23 11:19:16 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/23 11:31:32 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	init_game(const char *filename, t_game *game)
 		return (ft_putendl_fd_0("Error: converting to RRGGBB", 2));
 	if (!game->rrggbb_floor || !game->rrggbb_ceiling)
 		return (ft_putendl_fd_0("Error: hole on rrggbb", 2));
-	if (set_window(&game->mlx, game))
+	if (set_window(&game->mlx))
 		return (0);
 	return (1);
 }
