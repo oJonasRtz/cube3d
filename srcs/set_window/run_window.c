@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 13:21:48 by jopereir          #+#    #+#             */
-/*   Updated: 2025/04/23 17:07:45 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/23 18:31:15 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static void	check_the_pos(int pos, t_game *game, char c)
 	py = game->offset_y + (game->heigth / 2);
 	if (c == 'x')
 		px = pos + (game->width / 2);
-	else if (c == 'y')
+	if (c == 'y')
 		py = pos + (game->heigth / 2);
 	map_x = px / TILE_SIZE;
 	map_y = py / TILE_SIZE;
@@ -65,7 +65,6 @@ void	run_window(t_game *game)
 	if (!game)
 		return ;
 	mlx_loop_hook(game->mlx.mlx_ptr, &handle_no_event, NULL);
-	mlx_key_hook(game->mlx.win, &handle_input, game);
 	mlx_hook(game->mlx.win, 17, 0, &destroy, game);
 	mlx_hook(game->mlx.win, 2, 1L << 0, &handle_input, game);
 	minimap(game);
