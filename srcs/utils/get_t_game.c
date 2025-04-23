@@ -6,15 +6,15 @@
 /*   By: jopereir <jopereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 12:06:52 by jopereir          #+#    #+#             */
-/*   Updated: 2025/04/23 12:07:41 by jopereir         ###   ########.fr       */
+/*   Updated: 2025/04/23 12:16:32 by jopereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-t_game	get_t_game(void)
+t_game	*get_t_game(void)
 {
 	static t_game	game;
 
-	return (game);
+	return (&game);
 }
