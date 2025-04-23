@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 10:04:13 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/23 14:59:13 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/23 15:34:19 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,10 +49,10 @@ static void	draw_the_player(t_game *game)
 	new_player_y_location = (game->heigth / 2) - (TILE_SIZE / 4);
 	color = COLOUR_PLAYER;
 	y = 0;
-	while (y < TILE_SIZE)
+	while (y < TILE_SIZE / 2)
 	{
 		x = 0;
-		while (x < TILE_SIZE)
+		while (x < TILE_SIZE / 2)
 		{
 			mlx_pixel_put(game->mlx.mlx_ptr, game->mlx.win,
 				x + new_player_x_location, y + new_player_y_location, color);

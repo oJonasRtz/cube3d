@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 13:21:48 by jopereir          #+#    #+#             */
-/*   Updated: 2025/04/23 14:38:46 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/23 15:18:27 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ static int	handle_input(int key, t_game *game)
 		game->offset_x += TILE_SIZE;
 	if (key == 65364)
 		game->offset_y += TILE_SIZE;
-	if (game->offset_x > game->width || game->offset_y > game->heigth)
-		return (1);
 	mlx_clear_window(game->mlx.mlx_ptr, game->mlx.win);
+	game->min_row = game->offset_y / TILE_SIZE;
+	game->min_col = game->offset_x / TILE_SIZE;
 	minimap(game);
 	return (0);
 }
