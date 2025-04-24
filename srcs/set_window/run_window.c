@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 13:21:48 by jopereir          #+#    #+#             */
-/*   Updated: 2025/04/24 13:44:48 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/24 15:03:38 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ static void	update_dir_x_y(t_game *game, int pos, char c)
 			game->dir_x = 1;
 		else
 			game->dir_x = -1;
+		game->dir_y = 0;
 	}
 	else if (c == 'y')
 	{
@@ -32,6 +33,7 @@ static void	update_dir_x_y(t_game *game, int pos, char c)
 			game->dir_y = 1;
 		else
 			game->dir_y = -1;
+		game->dir_x = 0;
 	}
 }
 
