@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 13:21:48 by jopereir          #+#    #+#             */
-/*   Updated: 2025/04/24 12:36:46 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/24 13:04:10 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,25 @@
 static int	handle_no_event(void)
 {
 	return (0);
+}
+
+static void	update_dir_x_y(t_game *game, int pos, char c)
+{
+	if (c == 'x')
+	{
+		if (game->offset_x < pos)
+			game->dir_x = 1;
+		else
+			game->dir_x = -1;
+	}
+	else if (c == 'y')
+	{
+		if (game->offset_y < pos)
+			game->dir_y = 1;
+		else
+			game->dir_y = -1;
+	}
+	draw_radius(game);
 }
 
 static void	check_the_pos(int pos, t_game *game, char c)
@@ -34,6 +53,7 @@ static void	check_the_pos(int pos, t_game *game, char c)
 	map_y = py / TILE_SIZE;
 	if (game->true_game_map[map_y][map_x] != '1')
 	{
+		update_dir_x_y(game, pos, c);
 		if (c == 'x')
 			game->offset_x = pos;
 		else if (c == 'y')
