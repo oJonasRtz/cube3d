@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@42sp.org.br>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 11:03:01 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/24 14:59:44 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/24 17:26:51 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 void	draw_radius(t_game *game)
 {
 	int	index;
-	int	px;
+	double	px;
 	int	map_x;
 	int	map_y;
-	int	py;
+	double	py;
 
 	index = 0;
 	px = (game->width / 2) + game->offset_x;

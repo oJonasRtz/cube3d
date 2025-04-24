@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 12:55:55 by jopereir          #+#    #+#             */
-/*   Updated: 2025/04/24 15:10:01 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/24 17:27:22 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,11 +63,12 @@ typedef struct s_game
 	int		player_y;
 	int		offset_x;
 	int		offset_y;
-	int		dir_x;
-	int		dir_y;
+	double		dir_x;
+	double		dir_y;
 	int		min_col;
 	int		min_row;
 	int		max_col;
+	double		angle;
 	int		max_row;
 	int		width_map;
 	int		heigth_map;
