@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 13:21:48 by jopereir          #+#    #+#             */
-/*   Updated: 2025/04/24 13:04:10 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/24 13:44:48 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ static void	update_dir_x_y(t_game *game, int pos, char c)
 		else
 			game->dir_y = -1;
 	}
-	draw_radius(game);
 }
 
 static void	check_the_pos(int pos, t_game *game, char c)

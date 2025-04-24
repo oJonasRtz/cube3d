@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 10:04:13 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/24 12:41:27 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/24 13:29:12 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ static void	draw_the_player(t_game *game)
 		}
 		y++;
 	}
+	draw_radius(game);
 }
 
 void	minimap(t_game *game)
