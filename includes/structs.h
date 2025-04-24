@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 12:55:55 by jopereir          #+#    #+#             */
-/*   Updated: 2025/04/24 12:37:01 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/24 15:10:01 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,8 @@ typedef struct s_game
 	int		min_row;
 	int		max_col;
 	int		max_row;
+	int		width_map;
+	int		heigth_map;
 	char	**maps;
 	int		no_texture_index;
 	int		so_texture_index;
