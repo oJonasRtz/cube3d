@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 10:04:13 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/24 10:32:38 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/24 12:41:27 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ static void	show_the_art_to_godness(t_game *game, int s_y, int s_x, int c)
 	s_x *= TILE_SIZE;
 	s_y -= game->offset_y;
 	s_x -= game->offset_x;
-	if (!c)
-		c = COLOUR_DEFAULT;
 	y = 0;
 	while (y < TILE_SIZE)
 	{
@@ -81,7 +79,8 @@ void	minimap(t_game *game)
 			else if (c == '0' || c == 'N' || c == 'W' || c == 'E'
 				|| c == 'S')
 				color = COLOUR_FLOOR;
-			if (c != '\n')
+			if (c == '0' || c == '1' || c == 'N'
+				|| c == 'W' || c == 'E' || c == 'S')
 				show_the_art_to_godness(game, index, count, color);
 			count++;
 		}
