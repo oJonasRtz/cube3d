@@ -6,7 +6,7 @@
 /*   By: jopereir <jopereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 18:31:34 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/23 12:43:00 by jopereir         ###   ########.fr       */
+/*   Updated: 2025/04/24 10:32:26 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@
 # define COLOUR_FLOOR 0xff0000
 # define COLOUR_WALL 0x00ff00
 # define COLOUR_PLAYER 0x0000ff
+# define COLOUR_DEFAULT 0x0000f6
+# define MINIMAP_SCALE 0.125
 
 int		destroy(t_game *game);
 int		get_width_heigth(t_game *game);
