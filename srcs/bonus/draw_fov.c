@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 21:07:14 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/25 15:39:47 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/25 17:12:32 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ static void	new_position_px_py(t_game *game, double *px, double *py)
 {
 	*px = (game->width / 2) + game->offset_x;
 	*py = (game->heigth / 2) + game->offset_y;
+	game->px_start = *px;
+	game->py_start = *py;
 }
 
 static void	draw_new_radius_right(t_game *game)
@@ -42,6 +44,9 @@ static void	draw_new_radius_right(t_game *game)
 		px += game->dir_right_x;
 		py += game->dir_right_y;
 	}
+	game->dir_x_c = game->dir_right_x - game->px_start;
+	game->dir_y_c = game->dir_right_y - game->py_start;
+	get_distance(game, 3);
 }
 
 static void	draw_new_radius_left(t_game *game)
@@ -68,6 +73,9 @@ static void	draw_new_radius_left(t_game *game)
 		px += game->dir_left_x;
 		py += game->dir_left_y;
 	}
+	game->dir_x_c = game->dir_left_x - game->px_start;
+	game->dir_y_c = game->dir_left_y - game->py_start;
+	get_distance(game, 2);
 }
 
 void	draw_fov(t_game *game)

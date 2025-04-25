@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 12:55:55 by jopereir          #+#    #+#             */
-/*   Updated: 2025/04/25 15:46:54 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/25 17:17:59 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,18 +63,25 @@ typedef struct s_game
 	int		player_y;
 	int		offset_x;
 	int		offset_y;
-	double		dir_x;
-	double		dir_y;
+	double	dir_x;
+	double	dir_y;
 	int		min_col;
 	int		min_row;
 	int		max_col;
-	double		angle;
-	double		angle_left;
-	double		angle_right;
-	double		dir_left_x;
-	double		dir_left_y;
-	double		dir_right_x;
-	double		dir_right_y;
+	double	distance;
+	double	distance_r;
+	double	distance_l;
+	double	px_start;
+	double	py_start;
+	double	angle;
+	double	angle_left;
+	double	angle_right;
+	double	dir_left_x;
+	double	dir_left_y;
+	double	dir_right_x;
+	double	dir_right_y;
+	double	dir_x_c;
+	double	dir_y_c;
 	int		max_row;
 	int		width_map;
 	int		heigth_map;
@@ -85,7 +92,7 @@ typedef struct s_game
 	int		ea_texture_index;
 	int		floor_colours_index;
 	int		ceiling_colours_index;
-	char		player_eye;
+	char	player_eye;
 }	t_game;
 
 int			free_dynamic_texture(char **split);
