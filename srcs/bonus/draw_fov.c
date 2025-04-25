@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 21:07:14 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/24 21:07:14 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/25 15:39:47 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,13 @@ static void	new_position_px_py(t_game *game, double *px, double *py)
 
 static void	draw_new_radius_right(t_game *game)
 {
-	int		index;
 	double	px;
 	int		map_x;
 	int		map_y;
 	double	py;
 
-	index = 0;
 	new_position_px_py(game, &px, &py);
-	while (index < 1000)
+	while (1)
 	{
 		map_x = px / TILE_SIZE;
 		map_y = py / TILE_SIZE;
@@ -43,21 +41,18 @@ static void	draw_new_radius_right(t_game *game)
 			py - game->offset_y, COLOUR_DEFAULT);
 		px += game->dir_right_x;
 		py += game->dir_right_y;
-		index++;
 	}
 }
 
 static void	draw_new_radius_left(t_game *game)
 {
-	int		index;
 	double	px;
 	int		map_x;
 	int		map_y;
 	double	py;
 
-	index = 0;
 	new_position_px_py(game, &px, &py);
-	while (index < 1000)
+	while (1)
 	{
 		map_x = px / TILE_SIZE;
 		map_y = py / TILE_SIZE;
@@ -72,7 +67,6 @@ static void	draw_new_radius_left(t_game *game)
 			py - game->offset_y, COLOUR_DEFAULT);
 		px += game->dir_left_x;
 		py += game->dir_left_y;
-		index++;
 	}
 }
 

@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 12:55:55 by jopereir          #+#    #+#             */
-/*   Updated: 2025/04/24 17:27:22 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/25 15:46:54 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,7 @@ typedef struct s_game
 	int		ea_texture_index;
 	int		floor_colours_index;
 	int		ceiling_colours_index;
+	char		player_eye;
 }	t_game;
 
 int			free_dynamic_texture(char **split);
