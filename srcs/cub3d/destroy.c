@@ -14,6 +14,7 @@
 
 int	destroy(t_game *game)
 {
+	free_game(game);
 	if (game->mlx.win)
 		mlx_destroy_window(game->mlx.mlx_ptr, game->mlx.win);
 	if (game->mlx.mlx_ptr)
@@ -21,6 +22,5 @@ int	destroy(t_game *game)
 		mlx_destroy_display(game->mlx.mlx_ptr);
 		free(game->mlx.mlx_ptr);
 	}
-	free_game(game);
 	exit(0);
 }
