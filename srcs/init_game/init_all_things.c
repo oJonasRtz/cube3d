@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 22:54:02 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/25 15:38:31 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/25 18:39:08 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,10 @@ static void	set_more_things(t_game *game)
 	game->dir_left_y = 0;
 	game->dir_right_x = 0;
 	game->dir_right_y = 0;
+	game->ea_img = NULL;
+	game->so_img = NULL;
+	game->no_img = NULL;
+	game->we_img = NULL;
 }
 
 void	init_all_things(t_game *game)

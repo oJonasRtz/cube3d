@@ -67,6 +67,7 @@ SRCS =  $(SRCDIR)/cub3d/main.c\
 	$(SRCDIR)/bonus/update_angle_dir_x_y.c\
 	$(SRCDIR)/bonus/draw_fov.c\
 	$(SRCDIR)/bonus/get_distance.c\
+	$(SRCDIR)/init_game/check_and_set_images.c\
 	$(SRCDIR)/cub3d/destroy.c
 
 #OBJS

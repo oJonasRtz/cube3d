@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 12:55:55 by jopereir          #+#    #+#             */
-/*   Updated: 2025/04/25 17:17:59 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/25 18:37:09 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,10 @@ typedef struct s_game
 	double	dir_right_y;
 	double	dir_x_c;
 	double	dir_y_c;
+	void	*ea_img;
+	void	*we_img;
+	void	*no_img;
+	void	*so_img;
 	int		max_row;
 	int		width_map;
 	int		heigth_map;
