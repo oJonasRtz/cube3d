@@ -69,8 +69,8 @@ int	init_game(const char *filename, t_game *game)
 	game->max_row = game->width / TILE_SIZE;
 	if (set_window(&game->mlx))
 		return (0);
-	if (!check_and_set_images(game))
-		return (ft_putendl_fd_0("Error: invalid images", 2));
+	//if (!check_and_set_images(game))
+	//	return (ft_putendl_fd_0("Error: invalid images", 2));
 	set_player_eye_direction(game);
 	init_map(&game->map, game);
 	return (1);
