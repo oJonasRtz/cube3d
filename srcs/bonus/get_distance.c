@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@42sp.org.br>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 16:47:26 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/25 17:16:47 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/26 15:42:11 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,11 @@ void	get_distance(t_game *game, int flag)
 	if (flag == 3)
 	{
 		game->distance_r = sqrt((game->dir_x_c * game->dir_x_c)
+				+ (game->dir_y_c * game->dir_y_c));
+	}
+	if (flag == 4)
+	{
+		game->distance_x = sqrt((game->dir_x_c * game->dir_x_c)
 				+ (game->dir_y_c * game->dir_y_c));
 	}
 }

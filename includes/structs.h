@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 12:55:55 by jopereir          #+#    #+#             */
-/*   Updated: 2025/04/26 11:45:39 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/26 15:46:31 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,12 +81,17 @@ typedef struct s_game
 	double	angle;
 	double	angle_left;
 	double	angle_right;
+	double	dir_get_x;
+	double	dir_get_y;
 	double	dir_left_x;
 	double	dir_left_y;
 	double	dir_right_x;
 	double	dir_right_y;
 	double	dir_x_c;
 	double	dir_y_c;
+	double	distance_x;
+	double	angle_k;
+	double	target_x;
 	void	*ea_img;
 	void	*we_img;
 	void	*no_img;
