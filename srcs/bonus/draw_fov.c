@@ -6,11 +6,17 @@
 /*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 21:07:14 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/25 17:12:32 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/26 19:48:57 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/cub3d.h"
+
+static void	get_dir_x_y(t_game *game, double calc, double calc2)
+{
+	game->dir_x_c = calc - game->px_start;
+	game->dir_y_c = calc2 - game->py_start;
+}
 
 static void	new_position_px_py(t_game *game, double *px, double *py)
 {
@@ -39,13 +45,13 @@ static void	draw_new_radius_right(t_game *game)
 		if (game->true_game_map[map_y][map_x] == '1'
 			|| game->true_game_map[map_y][map_x] == ' ')
 			break ;
-		mlx_pixel_put(game->mlx.mlx_ptr, game->mlx.win, px - game->offset_x,
-			py - game->offset_y, COLOUR_DEFAULT);
+		mlx_pixel_put(game->mlx.mlx_ptr, game->mlx.win,
+			(px - game->offset_x) * MINIMAP_SCALE,
+			(py - game->offset_y) * MINIMAP_SCALE, COLOUR_DEFAULT);
 		px += game->dir_right_x;
 		py += game->dir_right_y;
 	}
-	game->dir_x_c = game->dir_right_x - game->px_start;
-	game->dir_y_c = game->dir_right_y - game->py_start;
+	get_dir_x_y(game, game->dir_right_x, game->dir_right_y);
 	get_distance(game, 3);
 }
 
@@ -68,13 +74,13 @@ static void	draw_new_radius_left(t_game *game)
 		if (game->true_game_map[map_y][map_x] == '1'
 			|| game->true_game_map[map_y][map_x] == ' ')
 			break ;
-		mlx_pixel_put(game->mlx.mlx_ptr, game->mlx.win, px - game->offset_x,
-			py - game->offset_y, COLOUR_DEFAULT);
+		mlx_pixel_put(game->mlx.mlx_ptr, game->mlx.win,
+			(px - game->offset_x) * MINIMAP_SCALE,
+			(py - game->offset_y) * MINIMAP_SCALE, COLOUR_DEFAULT);
 		px += game->dir_left_x;
 		py += game->dir_left_y;
 	}
-	game->dir_x_c = game->dir_left_x - game->px_start;
-	game->dir_y_c = game->dir_left_y - game->py_start;
+	get_dir_x_y(game, game->dir_left_x, game->dir_left_y);
 	get_distance(game, 2);
 }
 

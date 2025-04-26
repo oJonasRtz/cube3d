@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 12:09:42 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/26 16:19:39 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/26 19:49:25 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ static void	draw_column(t_game *game, int x)
 	while (y < game->draw_3d_center_e)
 	{
 		mlx_pixel_put(game->mlx.mlx_ptr, game->mlx.win,
-			x, y, COLOUR_DEFAULT);
+			400 + x, 400 + y, COLOUR_DEFAULT);
 		y++;
 	}
 }

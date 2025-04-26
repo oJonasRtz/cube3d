@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 12:55:55 by jopereir          #+#    #+#             */
-/*   Updated: 2025/04/26 15:46:31 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/26 19:50:20 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,11 +71,11 @@ typedef struct s_game
 	double	distance;
 	double	distance_r;
 	double	distance_l;
-	int	wall_3d_height;
-	int	wall_3d_width;
-	int	center_win;
-	int	draw_3d_center_s;
-	int	draw_3d_center_e;
+	int		wall_3d_height;
+	int		wall_3d_width;
+	int		center_win;
+	int		draw_3d_center_s;
+	int		draw_3d_center_e;
 	double	px_start;
 	double	py_start;
 	double	angle;

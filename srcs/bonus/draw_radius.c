@@ -6,11 +6,17 @@
 /*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 11:03:01 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/25 17:04:28 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/26 19:48:26 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/cub3d.h"
+
+static void	get_dir_x_y(t_game *game)
+{
+	game->dir_x_c = game->dir_x - game->px_start;
+	game->dir_y_c = game->dir_x - game->py_start;
+}
 
 static void	new_position_px_py(t_game *game, double *px, double *py)
 {
@@ -39,12 +45,12 @@ void	draw_radius(t_game *game)
 		if (game->true_game_map[map_y][map_x] == '1'
 			|| game->true_game_map[map_y][map_x] == ' ')
 			break ;
-		mlx_pixel_put(game->mlx.mlx_ptr, game->mlx.win, px - game->offset_x,
-			py - game->offset_y, COLOUR_DEFAULT);
+		mlx_pixel_put(game->mlx.mlx_ptr, game->mlx.win,
+			(px - game->offset_x) * MINIMAP_SCALE,
+			(py - game->offset_y) * MINIMAP_SCALE, COLOUR_DEFAULT);
 		px += game->dir_x;
 		py += game->dir_y;
 	}
-	game->dir_x_c = game->dir_x - game->px_start;
-	game->dir_y_c = game->dir_x - game->py_start;
+	get_dir_x_y(game);
 	get_distance(game, 1);
 }
