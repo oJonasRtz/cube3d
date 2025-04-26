@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 13:21:48 by jopereir          #+#    #+#             */
-/*   Updated: 2025/04/26 16:48:20 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/26 17:39:23 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ static int	handle_input(int key, t_game *game)
 	game->min_row = game->offset_y / TILE_SIZE;
 	game->min_col = game->offset_x / TILE_SIZE;
 	minimap(game);
-	//render_the_3d(game);
+	render_the_3d(game);
 	return (0);
 }
 
@@ -93,6 +93,6 @@ void	run_window(t_game *game)
 	mlx_hook(game->mlx.win, 17, 0, &destroy, game);
 	mlx_hook(game->mlx.win, 2, 1L << 0, &handle_input, game);
 	minimap(game);
-	//render_the_3d(game);
+	render_the_3d(game);
 	mlx_loop(game->mlx.mlx_ptr);
 }
