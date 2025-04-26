@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 12:55:55 by jopereir          #+#    #+#             */
-/*   Updated: 2025/04/25 18:37:09 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/26 10:36:51 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,8 @@ typedef struct s_game
 	double	distance;
 	double	distance_r;
 	double	distance_l;
+	int	wall_3d_height;
+	int	wall_3d_width;
 	double	px_start;
 	double	py_start;
 	double	angle;
