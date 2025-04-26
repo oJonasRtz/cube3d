@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@42sp.org.br>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 10:58:32 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/26 15:53:37 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/26 16:43:05 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 void	init_all_3d(t_game *game)
 {
 	game->center_win = game->heigth / 2;
+	if (game->distance_x < 1.0)
+		game->distance_x = 1.0;
 	if (game->distance_x > 0)
 	{
 		game->wall_3d_height = (TILE_SIZE * game->heigth)
@@ -33,4 +35,6 @@ void	init_all_3d(t_game *game)
 		game->draw_3d_center_s = 0;
 		game->draw_3d_center_e = 0;
 	}
+	if (game->wall_3d_height > game->heigth)
+		game->wall_3d_height = game->heigth;
 }

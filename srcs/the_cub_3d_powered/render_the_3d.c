@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 12:09:42 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/26 15:52:28 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/26 16:19:39 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,12 +44,12 @@ static void	get_radius(t_game *game)
 		py += game->dir_get_y;
 	}
 	game->target_x = map_x;
-	game->dir_x_c = game->dir_get_x - game->px_start;
-	game->dir_y_c = game->dir_get_y - game->py_start;
+	game->dir_x_c = px - game->px_start;
+	game->dir_y_c = py - game->py_start;
 	get_distance(game, 4);
 }
 
-static void	draw_column(t_game *game)
+static void	draw_column(t_game *game, int x)
 {
 	int	y;
 
@@ -58,18 +58,22 @@ static void	draw_column(t_game *game)
 	while (y < game->draw_3d_center_e)
 	{
 		mlx_pixel_put(game->mlx.mlx_ptr, game->mlx.win,
-			game->target_x, y, COLOUR_DEFAULT);
+			x, y, COLOUR_DEFAULT);
 		y++;
 	}
 }
 
 void	render_the_3d(t_game *game)
 {
+	int	x;
+
 	game->angle_k = game->angle_left;
-	while (game->angle_k <= game->angle_right)
+	x = 0;
+	while (game->angle_k <= game->angle_right && x < game->width)
 	{
 		get_radius(game);
-		draw_column(game);
+		draw_column(game, x);
 		game->angle_k += (game->angle_right - game->angle_left) / game->width;
+		x++;
 	}
 }
