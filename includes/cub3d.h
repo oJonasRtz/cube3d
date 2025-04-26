@@ -6,7 +6,7 @@
 /*   By: jopereir <jopereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 18:31:34 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/25 18:35:03 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/26 12:18:23 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,7 @@ void	draw_radius(t_game *game);
 void	update_angle_dir_x_y(t_game *game, int keycode);
 void	get_distance(t_game *game, int flag);
 int		check_and_set_images(t_game *game);
+void	init_all_3d(t_game *game);
+void	render_the_3d(t_game *game);
 
 #endif /* CUB3D_H */
