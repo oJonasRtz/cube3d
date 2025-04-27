@@ -6,13 +6,13 @@
 /*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 12:09:42 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/27 17:04:26 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/27 17:23:29 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/cub3d.h"
 
-static void	new_position_px_py(t_game *g, double *px, double *py)
+static void	new_position_px_py(t_game *g, double *px, double *py, double *s)
 {
 	*px = (g->width / 2) + g->offset_x;
 	*py = (g->heigth / 2) + g->offset_y;
@@ -20,6 +20,7 @@ static void	new_position_px_py(t_game *g, double *px, double *py)
 	g->py_start = *py;
 	g->dir_get_x = cos(g->angle_k);
 	g->dir_get_y = sin(g->angle_k);
+	*s = 1.0 / fmax(fabs(g->dir_get_x), fabs(g->dir_get_y));
 }
 
 static void	get_radius(t_game *game)
@@ -28,8 +29,9 @@ static void	get_radius(t_game *game)
 	int		map_x;
 	int		map_y;
 	double	py;
+	double	step;
 
-	new_position_px_py(game, &px, &py);
+	new_position_px_py(game, &px, &py, &step);
 	while (1)
 	{
 		map_x = px / TILE_SIZE;
@@ -40,8 +42,8 @@ static void	get_radius(t_game *game)
 		if (game->true_game_map[map_y][map_x] == '1'
 			|| game->true_game_map[map_y][map_x] == ' ')
 			break ;
-		px += game->dir_get_x;
-		py += game->dir_get_y;
+		px += game->dir_get_x * step;
+		py += game->dir_get_y * step;
 	}
 	game->target_x = map_x;
 	game->dir_x_c = px - game->px_start;
