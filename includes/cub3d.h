@@ -6,7 +6,7 @@
 /*   By: jopereir <jopereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 18:31:34 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/26 18:35:20 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/26 21:28:27 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,7 @@ void	get_distance(t_game *game, int flag);
 int		check_and_set_images(t_game *game);
 void	init_all_3d(t_game *game);
 void	render_the_3d(t_game *game);
+void	draw_floor(t_game *game, int x);
+void	draw_ceiling(t_game *game, int x);
 
 #endif /* CUB3D_H */

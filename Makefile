@@ -70,6 +70,8 @@ SRCS =  $(SRCDIR)/cub3d/main.c\
 	$(SRCDIR)/init_game/check_and_set_images.c\
 	$(SRCDIR)/the_cub_3d_powered/init_all_3d.c\
 	$(SRCDIR)/the_cub_3d_powered/render_the_3d.c\
+	$(SRCDIR)/the_cub_3d_powered/draw_floor.c\
+	$(SRCDIR)/the_cub_3d_powered/draw_ceiling.c\
 	$(SRCDIR)/cub3d/destroy.c
 
 #OBJS
