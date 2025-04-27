@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 12:55:55 by jopereir          #+#    #+#             */
-/*   Updated: 2025/04/26 19:50:20 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/27 19:45:51 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,8 @@ typedef struct s_game
 	char	*rrggbb_ceiling;
 	int		width;
 	int		heigth;
+	int		screen_w;
+	int		screen_h;
 	char	**true_game_map;
 	int		players;
 	int		invalid_map;

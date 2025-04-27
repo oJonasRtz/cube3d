@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 22:54:02 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/26 11:47:31 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/27 19:47:12 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ static void	set_more_things(t_game *game)
 	game->we_img = NULL;
 	game->wall_3d_height = 0;
 	game->wall_3d_width = 0;
+	game->screen_w = 0;
 }
 
 void	init_all_things(t_game *game)
@@ -63,5 +64,6 @@ void	init_all_things(t_game *game)
 	game->ea_texture_index = 0;
 	game->floor_colours_index = 0;
 	game->ceiling_colours_index = 0;
+	game->screen_h = 0;
 	set_more_things(game);
 }
