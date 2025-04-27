@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 12:09:42 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/26 21:37:51 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/27 17:04:26 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,17 +65,18 @@ static void	draw_column(t_game *game, int x)
 
 void	render_the_3d(t_game *game)
 {
-	int	x;
+	int		x;
+	double	new_x;
 
-	game->angle_k = game->angle_left;
 	x = 0;
-	while (game->angle_k <= game->angle_right && x < game->width)
+	while (x < game->width)
 	{
+		new_x = 2.0 * x / (game->width - 1.0) - 1.0;
+		game->angle_k = game->angle + atan(new_x * tan(VISUAL_CAMP / 2));
 		get_radius(game);
 		draw_ceiling(game, x);
 		draw_column(game, x);
 		draw_floor(game, x);
-		game->angle_k += (game->angle_right - game->angle_left) / game->width;
 		x++;
 	}
 }

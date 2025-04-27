@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 10:04:13 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/26 19:47:47 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/27 17:09:36 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,10 +79,10 @@ void	minimap(t_game *game)
 		{
 			c = game->true_game_map[index][count];
 			if (c == '1')
-				color = COLOUR_WALL;
+				color = COLOUR_DEFAULT;
 			else if (c == '0' || c == 'N' || c == 'W' || c == 'E'
 				|| c == 'S')
-				color = COLOUR_FLOOR;
+				color = ft_atoi_base(game->rrggbb_floor + 2, 16);
 			if (c == '0' || c == '1' || c == 'N'
 				|| c == 'W' || c == 'E' || c == 'S')
 				show_the_art_to_godness(game, index, count, color);
