@@ -6,7 +6,7 @@
 /*   By: jopereir <jopereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 18:31:34 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/26 21:28:27 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/27 10:58:12 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@
 # define COLOUR_FLOOR 0xff0000
 # define COLOUR_WALL 0x00ff00
 # define COLOUR_PLAYER 0x0000ff
-# define COLOUR_DEFAULT 0x0000ff
+# define COLOUR_DEFAULT 0x228B22
+# define COLOUR_RADIUS 0x0000ff
 # define MINIMAP_SCALE 0.5
 # define ROTATION_SPEED 0.05
 # define VISUAL_CAMP 0.8

@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 11:03:01 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/26 19:48:26 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/27 10:57:52 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void	draw_radius(t_game *game)
 			break ;
 		mlx_pixel_put(game->mlx.mlx_ptr, game->mlx.win,
 			(px - game->offset_x) * MINIMAP_SCALE,
-			(py - game->offset_y) * MINIMAP_SCALE, COLOUR_DEFAULT);
+			(py - game->offset_y) * MINIMAP_SCALE, COLOUR_RADIUS);
 		px += game->dir_x;
 		py += game->dir_y;
 	}
