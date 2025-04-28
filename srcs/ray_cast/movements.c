@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@42sp.org.br>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 15:40:14 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/28 15:46:26 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/28 18:11:31 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	move_w(t_game *game)
 {
-	int	next_x;
-	int	next_y;
+	double	next_x;
+	double	next_y;
 
 	next_x = game->offset_x + game->dir_x * MOVE_SPEED;
 	next_y = game->offset_y + game->dir_y * MOVE_SPEED;
@@ -25,10 +25,10 @@ void	move_w(t_game *game)
 		game->offset_y = next_y;
 }
 
-void	move_b(t_game *game)
+void	move_s(t_game *game)
 {
-	int	next_x;
-	int	next_y;
+	double	next_x;
+	double	next_y;
 
 	next_x = game->offset_x - game->dir_x * MOVE_SPEED;
 	next_y = game->offset_y - game->dir_y * MOVE_SPEED;
@@ -40,8 +40,8 @@ void	move_b(t_game *game)
 
 void	move_d(t_game *game)
 {
-	int	next_x;
-	int	next_y;
+	double	next_x;
+	double	next_y;
 
 	next_x = game->offset_x + game->plane_x * MOVE_SPEED;
 	next_y = game->offset_y + game->plane_y * MOVE_SPEED;
@@ -53,8 +53,8 @@ void	move_d(t_game *game)
 
 void	move_a(t_game *game)
 {
-	int	next_x;
-	int	next_y;
+	double	next_x;
+	double	next_y;
 
 	next_x = game->offset_x - game->plane_x * MOVE_SPEED;
 	next_y = game->offset_y - game->plane_y * MOVE_SPEED;

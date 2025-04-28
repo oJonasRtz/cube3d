@@ -6,7 +6,7 @@
 /*   By: jopereir <jopereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 18:31:34 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/28 16:42:28 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/28 18:20:47 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@
 # define COLOUR_DEFAULT 0x228B22
 # define COLOUR_RADIUS 0x0000ff
 # define MINIMAP_SCALE 0.5
-# define MOVE_SPEED 0.1
+# define MOVE_SPEED 10
 # define ROTATION_SPEED 0.05
 # define VISUAL_CAMP 0.8
 
@@ -48,7 +48,7 @@ int		can_move(t_game *game, double next_x, double next_y);
 void	move_a(t_game *game);
 void	move_w(t_game *game);
 void	move_s(t_game *game);
-void	move_e(t_game *game);
+void	move_d(t_game *game);
 void	get_plane_x_y(t_game *game);
 
 #endif /* CUB3D_H */

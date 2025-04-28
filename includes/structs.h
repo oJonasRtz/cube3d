@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 12:55:55 by jopereir          #+#    #+#             */
-/*   Updated: 2025/04/28 14:59:33 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/28 18:19:54 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,18 +51,18 @@ typedef struct s_game
 	void	*so_addr;
 	void	*ea_addr;
 	void	*we_addr;
-	int	bpp_no;
-	int	bpp_so;
-	int	bpp_we;
-	int	bpp_ea;
-	int	line_length_no;
-	int	line_length_so;
-	int	line_length_we;
-	int	line_length_ea;
-	int	endian_no;
-	int	endian_so;
-	int	endian_we;
-	int	endian_ea;
+	int		bpp_no;
+	int		bpp_so;
+	int		bpp_we;
+	int		bpp_ea;
+	int		line_length_no;
+	int		line_length_so;
+	int		line_length_we;
+	int		line_length_ea;
+	int		endian_no;
+	int		endian_so;
+	int		endian_we;
+	int		endian_ea;
 	double	plane_x;
 	double	plane_y;
 	char	*so_texture;

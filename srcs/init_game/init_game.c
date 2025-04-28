@@ -6,7 +6,7 @@
 /*   By: jopereir <jopereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 20:21:08 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/28 12:04:53 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/28 17:09:39 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,12 @@ static void	set_player_eye_direction(t_game *game)
 	update_angle(game);
 }
 
+static void	get_offset_x_y(t_game *game)
+{
+	game->offset_x = game->player_x * TILE_SIZE - (game->width / 2);
+	game->offset_y = game->player_y * TILE_SIZE - (game->heigth / 2);
+}
+
 int	init_game(const char *filename, t_game *game)
 {
 	init_all_things(game);
@@ -72,6 +78,8 @@ int	init_game(const char *filename, t_game *game)
 //	if (!check_and_set_images(game))
 //		return (ft_putendl_fd_0("Error: invalid images", 2));
 	set_player_eye_direction(game);
+	get_offset_x_y(game);
+	get_plane_x_y(game);
 	init_map(&game->map, game);
 	return (1);
 }
