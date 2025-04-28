@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 12:55:55 by jopereir          #+#    #+#             */
-/*   Updated: 2025/04/27 19:45:51 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/28 11:31:35 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,22 @@ typedef struct s_game
 	t_mlx	mlx;
 	t_map	map;
 	char	*no_texture;
+	void	*no_addr;
+	void	*so_addr;
+	void	*ea_addr;
+	void	*we_addr;
+	int	bpp_no;
+	int	bpp_so;
+	int	bpp_we;
+	int	bpp_ea;
+	int	line_length_no;
+	int	line_length_so;
+	int	line_length_we;
+	int	line_length_ea;
+	int	endian_no;
+	int	endian_so;
+	int	endian_we;
+	int	endian_ea;
 	char	*so_texture;
 	char	*we_texture;
 	char	*ea_texture;

@@ -6,11 +6,19 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 22:54:02 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/27 19:47:12 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/28 11:14:08 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/cub3d.h"
+
+static void	set_more_more_things(t_game *game)
+{
+	game->no_addr = NULL;
+	game->so_addr = NULL;
+	game->we_addr = NULL;
+	game->ea_addr = NULL;
+}
 
 static void	set_more_things(t_game *game)
 {
@@ -38,6 +46,7 @@ static void	set_more_things(t_game *game)
 	game->wall_3d_height = 0;
 	game->wall_3d_width = 0;
 	game->screen_w = 0;
+	set_more_more_things(game);
 }
 
 void	init_all_things(t_game *game)

@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 13:21:48 by jopereir          #+#    #+#             */
-/*   Updated: 2025/04/27 19:52:10 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/28 10:36:43 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,10 @@ void	run_window(t_game *game)
 	mlx_get_screen_size(game->mlx.mlx_ptr, &game->screen_w, &game->screen_h);
 	ft_printf("Screen Width: %d\n", game->screen_w);
 	ft_printf("Screen Heigth: %d\n", game->screen_h);
+	if (game->width > game->screen_w)
+		game->width = game->screen_w;
+	if (game->heigth > game->screen_h)
+		game->heigth = game->screen_h;
 	mlx_loop_hook(game->mlx.mlx_ptr, &handle_no_event, NULL);
 	mlx_hook(game->mlx.win, 17, 0, &destroy, game);
 	mlx_hook(game->mlx.win, 2, 1L << 0, &handle_input, game);

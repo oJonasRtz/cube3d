@@ -6,7 +6,7 @@
 /*   By: jopereir <jopereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 20:21:08 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/26 13:11:57 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/28 12:04:53 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,8 +69,8 @@ int	init_game(const char *filename, t_game *game)
 	game->max_row = game->width / TILE_SIZE;
 	if (set_window(&game->mlx))
 		return (0);
-	//if (!check_and_set_images(game))
-	//	return (ft_putendl_fd_0("Error: invalid images", 2));
+//	if (!check_and_set_images(game))
+//		return (ft_putendl_fd_0("Error: invalid images", 2));
 	set_player_eye_direction(game);
 	init_map(&game->map, game);
 	return (1);
