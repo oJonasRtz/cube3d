@@ -6,7 +6,7 @@
 /*   By: jopereir <jopereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 18:31:34 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/28 18:20:47 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/28 18:34:37 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@
 # include "ray_cast.h"
 
 # define COLOUR_FLOOR 0xff0000
-# define COLOUR_WALL 0x00ff00
+# define COLOUR_WALL 0xFFD700
 # define COLOUR_PLAYER 0x0000ff
-# define COLOUR_DEFAULT 0x228B22
+# define COLOUR_DEFAULT 0x228Bff
 # define COLOUR_RADIUS 0x0000ff
 # define MINIMAP_SCALE 0.5
 # define MOVE_SPEED 10
