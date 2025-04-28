@@ -6,7 +6,7 @@
 /*   By: jopereir <jopereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 18:31:34 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/28 14:51:39 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/28 16:42:28 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,11 @@ void	init_all_3d(t_game *game);
 void	render_the_3d(t_game *game);
 void	draw_floor(t_game *game, int x);
 void	draw_ceiling(t_game *game, int x);
+int		can_move(t_game *game, double next_x, double next_y);
+void	move_a(t_game *game);
+void	move_w(t_game *game);
+void	move_s(t_game *game);
+void	move_e(t_game *game);
+void	get_plane_x_y(t_game *game);
 
 #endif /* CUB3D_H */
