@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@42sp.org.br>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 15:40:14 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/28 15:40:17 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/28 15:46:26 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void	move_d(t_game *game)
 	next_y = game->offset_y + game->plane_y * MOVE_SPEED;
 	if (can_move(game, next_x, game->offset_y))
 		game->offset_x = next_x;
-	if (can_move(game->offset_x, next_y))
+	if (can_move(game, game->offset_x, next_y))
 		game->offset_y = next_y;
 }
 
@@ -60,6 +60,6 @@ void	move_a(t_game *game)
 	next_y = game->offset_y - game->plane_y * MOVE_SPEED;
 	if (can_move(game, next_x, game->offset_y))
 		game->offset_x = next_x;
-	if (can_move(game->offset_x, next_y))
+	if (can_move(game, game->offset_x, next_y))
 		game->offset_y = next_y;
 }
