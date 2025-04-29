@@ -75,6 +75,7 @@ SRCS =  $(SRCDIR)/cub3d/main.c\
 	$(SRCDIR)/ray_cast/can_move.c\
 	$(SRCDIR)/ray_cast/get_plane_x_y.c\
 	$(SRCDIR)/ray_cast/movements.c\
+	$(SRCDIR)/set_window/get_keys.c\
 	$(SRCDIR)/cub3d/destroy.c
 
 #OBJS
