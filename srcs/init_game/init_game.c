@@ -6,7 +6,7 @@
 /*   By: jopereir <jopereir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 20:21:08 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/28 17:09:39 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/29 12:46:16 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,8 +73,6 @@ int	init_game(const char *filename, t_game *game)
 		return (ft_putendl_fd_0("Error: hole on rrggbb", 2));
 	game->max_col = game->heigth / TILE_SIZE;
 	game->max_row = game->width / TILE_SIZE;
-	if (set_window(&game->mlx))
-		return (0);
 //	if (!check_and_set_images(game))
 //		return (ft_putendl_fd_0("Error: invalid images", 2));
 	set_player_eye_direction(game);
