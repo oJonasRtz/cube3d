@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   draw_floor.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fruan-ba <fruan-ba@42sp.org.br>            +#+  +:+       +#+        */
+/*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 21:16:18 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/27 19:25:56 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/29 12:03:42 by jonas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	draw_floor(t_game *game, int x)
 	while (y < game->heigth)
 	{
 		mlx_pixel_put(game->mlx.mlx_ptr, game->mlx.win,
-			400 + x, 400 + y, colour);
+			x, y, colour);
 		y++;
 	}
 }

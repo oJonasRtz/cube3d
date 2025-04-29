@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   structs.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 12:55:55 by jopereir          #+#    #+#             */
-/*   Updated: 2025/04/28 18:19:54 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/29 11:51:05 by jonas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,19 @@ typedef struct s_map
 	t_player	player;
 }	t_map;
 
+typedef struct s_game	t_game;
+
+typedef struct s_keys
+{
+	int	key;
+	void	(*f)(t_game*);
+}	t_keys;
+
 typedef struct s_game
 {
 	t_mlx	mlx;
 	t_map	map;
+	t_keys	keys;
 	char	*no_texture;
 	void	*no_addr;
 	void	*so_addr;

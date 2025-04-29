@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   render_the_3d.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 12:09:42 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/27 17:23:29 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/29 12:02:55 by jonas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ static void	draw_column(t_game *game, int x)
 	while (y < game->draw_3d_center_e)
 	{
 		mlx_pixel_put(game->mlx.mlx_ptr, game->mlx.win,
-			400 + x, 400 + y, COLOUR_DEFAULT);
+			x, y, COLOUR_DEFAULT);
 		y++;
 	}
 }
