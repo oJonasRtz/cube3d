@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@42sp.org.br>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 12:48:56 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/30 14:08:01 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/30 14:30:34 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static void	calculate_sidedist(t_game *game, double px, double py)
 	}
 	if (game->dda.stepY == -1)
 	{
-		game->dda.sideDistY = (py - game->dda.mapY) 
+		game->dda.sideDistY = (py - game->dda.mapY)
 			* game->dda.deltaDistY;
 	}
 	else
