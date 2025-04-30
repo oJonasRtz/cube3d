@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 12:55:55 by jopereir          #+#    #+#             */
-/*   Updated: 2025/04/30 12:02:08 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/30 12:48:29 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,12 @@
 
 typedef struct s_ray
 {
+	double	px;
+	double	py;
 	double	dirX;
 	double	dirY;
+	double	planeX;
+	double	planeY;
 }	t_ray;
 
 typedef struct s_dda
