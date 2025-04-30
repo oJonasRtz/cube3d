@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 12:55:55 by jopereir          #+#    #+#             */
-/*   Updated: 2025/04/30 11:58:37 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/30 12:02:08 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,12 @@
 # include <limits.h>
 # include "cub3d.h"
 # define TILE_SIZE 64
+
+typedef struct s_ray
+{
+	double	dirX;
+	double	dirY;
+}	t_ray;
 
 typedef struct s_dda
 {
@@ -72,6 +78,7 @@ typedef struct s_game
 	t_map	map;
 	t_keys	keys;
 	t_dda	dda;
+	t_ray	rays;
 	void	*no_addr;
 	void	*so_addr;
 	void	*ea_addr;
