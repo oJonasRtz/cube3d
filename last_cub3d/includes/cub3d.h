@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 18:31:34 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/29 11:31:21 by jonas            ###   ########.fr       */
+/*   Updated: 2025/04/30 11:56:01 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 # include "validation.h"
 # include "window.h"
 # include "ray_cast.h"
+# include "dda.h"
 
 # define COLOUR_FLOOR 0xff0000
 # define COLOUR_WALL 0xFFD700
