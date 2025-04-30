@@ -21,6 +21,7 @@ static void	new_position_px_py(t_game *g, double *px, double *py, double *s)
 	g->dir_get_x = cos(g->angle_k);
 	g->dir_get_y = sin(g->angle_k);
 	*s = 1.0 / fmax(fabs(g->dir_get_x), fabs(g->dir_get_y));
+	*s *= 0.5;
 }
 
 static void	get_radius(t_game *game)
@@ -38,7 +39,11 @@ static void	get_radius(t_game *game)
 		map_y = py / TILE_SIZE;
 		if (px < 0 || py < 0 || map_y >= game->heigth_map
 			|| map_x >= (int)ft_strlen(game->true_game_map[map_y]))
+		{
+			px -= game->dir_get_x * step;
+			py -= game->dir_get_y * step;
 			break ;
+		}
 		if (game->true_game_map[map_y][map_x] == '1'
 			|| game->true_game_map[map_y][map_x] == ' ')
 			break ;
@@ -53,11 +58,22 @@ static void	get_radius(t_game *game)
 
 static void	draw_column(t_game *game, int x)
 {
+	int	start;
+	int	end;
+	int	max_y;
 	int	y;
 
-	init_all_3d(game);
-	y = game->draw_3d_center_s;
-	while (y < game->draw_3d_center_e)
+	start = game->draw_3d_center_s;
+	end = game->draw_3d_center_e;
+	max_y = game->heigth - 1;
+	if (end < 0 || start > max_y)
+		return ;
+	if (start < 0)
+		start = 0;
+	if (end > max_y)
+		end = max_y;
+	y = start;
+	while (y <= end)
 	{
 		mlx_pixel_put(game->mlx.mlx_ptr, game->mlx.win,
 			x, y, COLOUR_DEFAULT);
@@ -68,14 +84,18 @@ static void	draw_column(t_game *game, int x)
 void	render_the_3d(t_game *game)
 {
 	int		x;
+	double	angle_diff;
 	double	new_x;
 
 	x = 0;
 	while (x < game->width)
 	{
 		new_x = 2.0 * x / (game->width - 1.0) - 1.0;
-		game->angle_k = game->angle + atan(new_x * tan(VISUAL_CAMP / 2));
+		game->angle_k = game->angle + atan(new_x * tan(VISUAL_CAMP / 2.0));
 		get_radius(game);
+		angle_diff = game->angle_k - game->angle;
+		game->distance_x *= cos(angle_diff);
+		init_all_3d(game);
 		draw_ceiling(game, x);
 		draw_column(game, x);
 		draw_floor(game, x);

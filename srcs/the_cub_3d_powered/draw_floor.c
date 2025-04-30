@@ -16,12 +16,18 @@ void	draw_floor(t_game *game, int x)
 {
 	int	colour;
 	int	y;
+	int	start;
+	int	max_y;
 
+	start = game->draw_3d_center_e + 1;
+	max_y = game->heigth - 1;
+	if (start > max_y)
+		return ;
+	if (start < 0)
+		start = 0;
 	colour = ft_atoi_base(game->rrggbb_floor + 2, 16);
-	if (game->draw_3d_center_e > game->heigth)
-		game->draw_3d_center_e = game->heigth;
-	y = game->draw_3d_center_e;
-	while (y < game->heigth)
+	y = start;
+	while (y <= max_y)
 	{
 		mlx_pixel_put(game->mlx.mlx_ptr, game->mlx.win,
 			x, y, colour);

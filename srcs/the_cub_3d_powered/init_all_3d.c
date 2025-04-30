@@ -14,27 +14,21 @@
 
 void	init_all_3d(t_game *game)
 {
-	game->center_win = game->heigth / 2;
-	if (game->distance_x < 1.0)
-		game->distance_x = 1.0;
-	if (game->distance_x > 0)
-	{
-		game->wall_3d_height = (TILE_SIZE * game->heigth)
-			/ game->distance_x;
-		game->wall_3d_width = (TILE_SIZE * game->width)
-			/ game->distance_x;
-		if (game->wall_3d_height > game->heigth)
-			game->wall_3d_height = game->heigth;
-		game->draw_3d_center_s = game->center_win
-			- (game->wall_3d_height / 2);
-		game->draw_3d_center_e = game->center_win
-			+ (game->wall_3d_height / 2);
-	}
-	else
-	{
-		game->wall_3d_height = 0;
-		game->wall_3d_width = 0;
-		game->draw_3d_center_s = 0;
-		game->draw_3d_center_e = 0;
-	}
+	double	proj_plane_dist;
+	double	perp_dist;
+	int	start;
+	int	end;
+	double	raw_h;
+
+	proj_plane_dist = (game->width / 2.0 / tan(VISUAL_CAMP / 2.0));
+	perp_dist = fmax(game->distance_x, 0.0001);
+	raw_h = (TILE_SIZE / perp_dist) * proj_plane_dist;
+	start = (int)floor(game->heigth / 2.0 - raw_h / 2.0);
+	end = (int)ceil(game->heigth / 2.0 + raw_h / 2.0) - 1;
+	if (start < 0)
+		start = 0;
+	if (end > game->heigth - 1)
+		end = game->heigth - 1;
+	game->draw_3d_center_s = start;
+	game->draw_3d_center_e = end;
 }

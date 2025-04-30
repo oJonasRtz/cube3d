@@ -16,12 +16,18 @@ void	draw_ceiling(t_game *game, int x)
 {
 	int	colour;
 	int	y;
+	int	end;
+	int	max_y;
 
+	end = game->draw_3d_center_s - 1;
+	max_y = game->heigth - 1;
+	if (end < 0)
+		return ;
+	if (end > max_y)
+		end = max_y;
 	y = 0;
 	colour = ft_atoi_base(game->rrggbb_ceiling + 2, 16);
-	if (game->draw_3d_center_s < 0)
-		game->draw_3d_center_s = 0;
-	while (y < game->draw_3d_center_s)
+	while (y <= end)
 	{
 		mlx_pixel_put(game->mlx.mlx_ptr, game->mlx.win,
 			x, y, colour);
