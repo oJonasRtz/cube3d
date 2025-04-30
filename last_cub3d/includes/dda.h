@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@42sp.org.br>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 11:36:33 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/30 14:29:36 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/30 16:48:16 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,6 @@ void	init_camera_plane(t_game *game);
 void	init_ray(t_game *game, int x);
 void	init_dda_params(t_game *game);
 void	dda_loop(t_game *game);
+double	calculate_perp_dist_update_wall(t_game *game);
 
 #endif /* DDA_H */

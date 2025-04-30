@@ -76,6 +76,11 @@ SRCS =  $(SRCDIR)/cub3d/main.c\
 	$(SRCDIR)/ray_cast/get_plane_x_y.c\
 	$(SRCDIR)/ray_cast/movements.c\
 	$(SRCDIR)/set_window/get_keys.c\
+	$(SRCDIR)/dda/calculate_perp_dist_update_wall.c\
+	$(SRCDIR)/dda/dda_loop.c\
+	$(SRCDIR)/dda/init_camera.c\
+	$(SRCDIR)/dda/init_dda_params.c\
+	$(SRCDIR)/dda/init_ray.c\
 	$(SRCDIR)/cub3d/destroy.c
 
 #OBJS

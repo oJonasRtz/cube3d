@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 12:55:55 by jopereir          #+#    #+#             */
-/*   Updated: 2025/04/30 12:48:29 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/04/30 16:58:01 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,9 @@ typedef struct s_dda
 	double	rayDirY;
 	int	mapX;
 	int	mapY;
+	int	lineHeight;
+	int	drawStart;
+	int	drawEnd;
 	double	deltaDistX;
 	double	deltaDistY;
 	int	stepX;
@@ -62,13 +65,13 @@ typedef struct s_player
 	int	angle;
 }	t_player;
 
+typedef struct s_game	t_game;
+
 typedef struct s_map
 {
 	char		***map;
 	t_player	player;
 }	t_map;
-
-typedef struct s_game	t_game;
 
 typedef struct s_keys
 {
