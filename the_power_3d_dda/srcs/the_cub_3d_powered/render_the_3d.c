@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 12:09:42 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/30 18:51:54 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/05/01 13:15:12 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,6 @@ void	render_the_3d(t_game *game)
 {
 	int		x;
 
-	update_offset(game);
 	init_camera_plane(game);
 	x = 0;
 	while (x < game->width)

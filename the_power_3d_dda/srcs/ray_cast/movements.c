@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@42sp.org.br>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 15:40:14 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/30 18:49:59 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/05/01 14:30:12 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ void	move_w(t_game *game)
 		game->player_x = next_x;
 	if (can_move(game, game->player_x, next_y))
 		game->player_y = next_y;
+	update_offset(game);
 }
 
 void	move_s(t_game *game)
@@ -42,30 +43,41 @@ void	move_s(t_game *game)
 		game->player_x = next_x;
 	if (can_move(game, game->player_x, next_y))
 		game->player_y = next_y;
+	update_offset(game);
 }
 
 void	move_d(t_game *game)
 {
 	double	next_x;
 	double	next_y;
+	double	perpX;
+	double	perpY;
 
-	next_x = game->player_x + game->rays.planeX * MOVE_SPEED;
-	next_y = game->player_y + game->rays.planeY * MOVE_SPEED;
+	perpX = -game->rays.dirY;
+	perpY = game->rays.dirX;
+	next_x = game->player_x + perpX * MOVE_SPEED;
+	next_y = game->player_y + perpY * MOVE_SPEED;
 	if (can_move(game, next_x, game->player_y))
 		game->player_x = next_x;
 	if (can_move(game, game->player_x, next_y))
 		game->player_y = next_y;
+	update_offset(game);
 }
 
 void	move_a(t_game *game)
 {
 	double	next_x;
 	double	next_y;
+	double	perpX;
+	double	perpY;
 
-	next_x = game->player_x - game->rays.planeX * MOVE_SPEED;
-	next_y = game->player_y - game->rays.planeY * MOVE_SPEED;
+	perpX = -game->rays.dirY;
+	perpY = game->rays.dirX;
+	next_x = game->player_x - perpX * MOVE_SPEED;
+	next_y = game->player_y - perpY * MOVE_SPEED;
 	if (can_move(game, next_x, game->player_y))
 		game->player_x = next_x;
 	if (can_move(game, game->player_x, next_y))
 		game->player_y = next_y;
+	update_offset(game);
 }
