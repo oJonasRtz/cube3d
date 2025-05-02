@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   dda_loop.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fruan-ba <fruan-ba@42sp.org.br>            +#+  +:+       +#+        */
+/*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 14:17:14 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/30 18:44:56 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/05/02 15:59:37 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	dda_loop(t_game *game)
 			|| game->dda.mapY >= game->heigth_map)
 		{
 			game->dda.hit = 1;
-			break;
+			break ;
 		}
 		if (game->true_game_map[game->dda.mapY][game->dda.mapX] == '1')
 			game->dda.hit = 1;

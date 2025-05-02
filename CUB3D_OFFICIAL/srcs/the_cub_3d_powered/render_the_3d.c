@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   render_the_3d.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
+/*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 12:09:42 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/05/01 13:15:12 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/05/02 16:01:32 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ static void	draw_column(t_game *game, int x)
 
 void	render_the_3d(t_game *game)
 {
-	int		x;
+	int			x;
 	double		px;
 	double		py;
 
