@@ -12,14 +12,12 @@
 
 #include "../../includes/cub3d.h"
 
-void	calculate_perp_dist_update_wall(t_game *game)
+void	calculate_perp_dist_update_wall(t_game *game, double px, double py)
 {
-	double	px;
-	double	py;
 	double	perpDist;
 
-	px = game->player_x;
-	py = game->player_y;
+	px = px / TILE_SIZE;
+	py = py / TILE_SIZE;
 	if (game->dda.side == 0)
 	{
 		perpDist = ((game->dda.mapX - px) + (1 - game->dda.stepX) / 2.0)

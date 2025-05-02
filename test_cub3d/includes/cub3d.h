@@ -30,7 +30,7 @@
 # define COLOUR_DEFAULT 0x228Bff
 # define COLOUR_RADIUS 0x0000ff
 # define MINIMAP_SCALE 0.5
-# define MOVE_SPEED 0.5
+# define MOVE_SPEED 10
 # define ROTATION_SPEED 0.05
 # define VISUAL_CAMP 0.8
 

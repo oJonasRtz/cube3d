@@ -17,13 +17,10 @@ int	can_move(t_game *game, double next_x, double next_y)
 	int	map_x;
 	int	map_y;
 
-	map_x = (int)floor(next_x);
-	map_y = (int)floor(next_y);
-	if (map_y < 0 || map_y >= game->heigth_map
-		|| map_x < 0
-		|| map_x >= (int)ft_strlen(game->true_game_map[map_y]))
-		return (0);
-	if (game->true_game_map[map_y][map_x] == '1' || game->true_game_map[map_y][map_x] == ' ')
+	map_x = (int)(next_x + (game->width / 2)) / TILE_SIZE;
+	map_y = (int)(next_y + (game->heigth / 2)) / TILE_SIZE;
+	if (game->true_game_map[map_y][map_x] == '1')
 		return (0);
 	return (1);
 }
+

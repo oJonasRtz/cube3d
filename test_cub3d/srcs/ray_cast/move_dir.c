@@ -27,5 +27,5 @@ void	move_dir(t_game *game, double angle)
 		game->player_x = next_x;
 	if (can_move(game, game->player_x, next_y))
 		game->player_y = next_y;
-	update_offset(game);
+	//update_offset(game);
 }

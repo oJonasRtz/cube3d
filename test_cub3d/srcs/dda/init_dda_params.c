@@ -36,13 +36,10 @@ static void	calculate_sidedist(t_game *game, double px, double py)
 	}
 }
 
-void	init_dda_params(t_game *game)
+void	init_dda_params(t_game *game, double px, double py)
 {
-	double	px;
-	double	py;
-
-	px = game->player_x;
-	py = game->player_y;
+	px = px / TILE_SIZE;
+	py = py / TILE_SIZE;
 	game->dda.mapX = (int)px;
 	game->dda.mapY = (int)py;
 	game->dda.deltaDistX = fabs(1.0 / game->dda.rayDirX);

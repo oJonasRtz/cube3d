@@ -12,7 +12,7 @@
 
 #include "../../includes/cub3d.h"
 
-/*static void	new_position_px_py(t_game *g, double *px, double *py, double *s)
+static void	new_position_px_py(t_game *g, double *px, double *py)
 {
 	*px = (g->width / 2) + g->offset_x;
 	*py = (g->heigth / 2) + g->offset_y;
@@ -20,9 +20,8 @@
 	g->py_start = *py;
 	g->dir_get_x = cos(g->angle_k);
 	g->dir_get_y = sin(g->angle_k);
-	*s = 1.0 / fmax(fabs(g->dir_get_x), fabs(g->dir_get_y));
 }
-
+/*
 static void	get_radius(t_game *game)
 {
 	double	px;
@@ -67,15 +66,18 @@ static void	draw_column(t_game *game, int x)
 void	render_the_3d(t_game *game)
 {
 	int		x;
+	double		px;
+	double		py;
 
 	init_camera_plane(game);
 	x = 0;
 	while (x < game->width)
 	{
+		new_position_px_py(game, &px, &py);
 		init_ray(game, x);
-		init_dda_params(game);
+		init_dda_params(game, px, py);
 		dda_loop(game);
-		calculate_perp_dist_update_wall(game);
+		calculate_perp_dist_update_wall(game, px, py);
 		game->draw_3d_center_s = game->dda.drawStart;
 		game->draw_3d_center_e = game->dda.drawEnd;
 		draw_ceiling(game, x);

@@ -24,5 +24,5 @@ void	rotate_dir(t_game *game, double rot_angle)
 	old_p = game->rays.planeX;
 	game->rays.planeX = old_p * cos(rot_angle) - game->rays.planeY * sin(rot_angle);
 	game->rays.planeY = old_p * sin(rot_angle) + game->rays.planeY * cos(rot_angle);
-	update_offset(game);
+//	update_offset(game);
 }
