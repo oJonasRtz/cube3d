@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 18:31:34 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/05/02 15:55:36 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/05/02 18:34:19 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@
 # define COLOUR_FLOOR 0xff0000
 # define COLOUR_WALL 0xFFD700
 # define COLOUR_PLAYER 0x0000ff
-# define COLOUR_DEFAULT 0x228Bff
+# define COLOUR_DEFAULT 0xa08c78
 # define COLOUR_RADIUS 0x0000ff
 # define MINIMAP_SCALE 0.5
 # define MOVE_SPEED 20

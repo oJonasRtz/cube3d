@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@42sp.org.br>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 17:35:03 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/30 17:44:13 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/05/02 18:45:09 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	init_camera_plane(t_game *game)
 {
-	game->rays.dirX = cos(game->angle);
-	game->rays.dirY = sin(game->angle);
-	game->rays.planeX = -game->rays.dirY * VISUAL_CAMP;
-	game->rays.planeY = game->rays.dirX * VISUAL_CAMP;
+	game->rays.dirx = cos(game->angle);
+	game->rays.diry = sin(game->angle);
+	game->rays.planex = -game->rays.diry * VISUAL_CAMP;
+	game->rays.planey = game->rays.dirx * VISUAL_CAMP;
 }

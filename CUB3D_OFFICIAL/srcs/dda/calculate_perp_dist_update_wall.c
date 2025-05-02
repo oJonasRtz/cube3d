@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 16:47:44 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/05/02 16:02:51 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/05/02 18:54:56 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,21 +20,21 @@ void	calculate_perp_dist_update_wall(t_game *game, double px, double py)
 	py = py / TILE_SIZE;
 	if (game->dda.side == 0)
 	{
-		perp_dist = ((game->dda.mapX - px) + (1 - game->dda.stepX) / 2.0)
-			/ game->dda.rayDirX;
+		perp_dist = ((game->dda.mapx - px) + (1 - game->dda.stepx) / 2.0)
+			/ game->dda.raydirx;
 	}
 	else
 	{
-		perp_dist = ((game->dda.mapY - py) + (1 - game->dda.stepY) / 2.0)
-			/ game->dda.rayDirY;
+		perp_dist = ((game->dda.mapy - py) + (1 - game->dda.stepy) / 2.0)
+			/ game->dda.raydiry;
 	}
 	if (perp_dist <= 0.0)
 		perp_dist = 0.0001;
-	game->dda.lineHeight = (int)(game->heigth / perp_dist);
-	game->dda.drawStart = -game->dda.lineHeight / 2 + game->heigth / 2;
-	if (game->dda.drawStart < 0)
-		game->dda.drawStart = 0;
-	game->dda.drawEnd = game->dda.lineHeight / 2 + game->heigth / 2;
-	if (game->dda.drawEnd >= game->heigth)
-		game->dda.drawEnd = game->heigth - 1;
+	game->dda.lineheight = (int)(game->heigth / perp_dist);
+	game->dda.drawstart = -game->dda.lineheight / 2 + game->heigth / 2;
+	if (game->dda.drawstart < 0)
+		game->dda.drawstart = 0;
+	game->dda.drawend = game->dda.lineheight / 2 + game->heigth / 2;
+	if (game->dda.drawend >= game->heigth)
+		game->dda.drawend = game->heigth - 1;
 }

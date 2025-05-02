@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   structs.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
+/*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 12:55:55 by jopereir          #+#    #+#             */
-/*   Updated: 2025/04/30 16:58:01 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/05/02 18:56:33 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,29 +21,29 @@ typedef struct s_ray
 {
 	double	px;
 	double	py;
-	double	dirX;
-	double	dirY;
-	double	planeX;
-	double	planeY;
+	double	dirx;
+	double	diry;
+	double	planex;
+	double	planey;
 }	t_ray;
 
 typedef struct s_dda
 {
-	int	hit;
-	int	side;
-	double	rayDirX;
-	double	rayDirY;
-	int	mapX;
-	int	mapY;
-	int	lineHeight;
-	int	drawStart;
-	int	drawEnd;
-	double	deltaDistX;
-	double	deltaDistY;
-	int	stepX;
-	int	stepY;
-	double	sideDistX;
-	double	sideDistY;
+	int		hit;
+	int		side;
+	double	raydirx;
+	double	raydiry;
+	int		mapx;
+	int		mapy;
+	int		lineheight;
+	int		drawstart;
+	int		drawend;
+	double	deltadistx;
+	double	deltadisty;
+	int		stepx;
+	int		stepy;
+	double	sidedistx;
+	double	sidedisty;
 }	t_dda;
 
 typedef struct s_angle

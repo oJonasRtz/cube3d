@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/20 19:50:38 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/22 15:03:19 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/05/02 17:59:18 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ static void	free_map_copy(char **map)
 
 static void	start_test_flood_fill(char **map, int x, int y, t_game *game)
 {
+	if (x < 0 || x >= game->width_map || y < 0 || y >= game->heigth_map)
+		return ;
 	if (map[y][x] == '1' || map[y][x] == 'V' || map[y][x] == ' ')
 	{
 		if (map[y][x] == ' ')
