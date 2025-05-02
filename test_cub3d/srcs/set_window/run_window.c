@@ -41,10 +41,8 @@ static int	handle_input(int key, t_game *game)
 {
 	if (key == 65307)
 		destroy(game);
-	if (key == 65361)
-		rotate_dir(game, -ROTATION_SPEED);
-	if (key == 65363)
-		rotate_dir(game, ROTATION_SPEED);
+	if (key == 65361 || key == 65363)
+		update_angle_dir_x_y(game, key);
 	get_handle_key(key, 1);
 	return (0);
 }
