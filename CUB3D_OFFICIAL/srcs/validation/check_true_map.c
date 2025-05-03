@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@42sp.org.br>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/19 19:39:09 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/05/03 18:25:57 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/05/03 18:56:28 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ static int	check_special_chars(t_game *game)
 	{
 		if (game->true_game_map[index][0]
 			&& (game->true_game_map[index][0] == '\n'
-			|| game->true_game_map[index][0] == '\t'
 			|| game->true_game_map[index][0] == '\v'
 			|| game->true_game_map[index][0] == '\f'
 			|| game->true_game_map[index][0] == '\r'
