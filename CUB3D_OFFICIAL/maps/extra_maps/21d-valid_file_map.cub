@@ -1,13 +1,13 @@
 
 
-NO ./maps/croissant.png
+NO ./maps/croissant.xpm
             
             
-SO ./maps/croissant.png
+SO ./maps/croissant.xpm
         
-WE ./maps/croissant.png
+WE ./maps/croissant.xpm
 
-EA ./maps/croissant.png
+EA ./maps/croissant.xpm
 
 
 F 100,100,0

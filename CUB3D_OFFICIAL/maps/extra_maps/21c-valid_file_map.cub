@@ -1,7 +1,7 @@
-NO ./assets/wall/brick-1l.png
-SO ./assets/wall/brick-1l.png
-WE ./assets/wall/brick-2d.png
-EA ./assets/wall/brick-1d.png
+NO ./assets/wall/brick-1l.xpm
+SO ./assets/wall/brick-1l.xpm
+WE ./assets/wall/brick-2d.xpm
+EA ./assets/wall/brick-1d.xpm
 
 C 173,232,244
 F 58,90,64
