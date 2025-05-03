@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@42sp.org.br>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/19 19:39:09 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/05/03 18:56:28 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/05/03 19:22:57 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ static int	check_special_chars(t_game *game)
 {
 	int	index;
 
-	show_textures(game);
 	index = 0;
 	while (game->true_game_map[index] != NULL)
 	{
@@ -63,6 +62,6 @@ int	check_true_map(t_game *game)
 	if (!check_special_chars(game))
 		return (ft_putendl_fd_0("Error: \\n,\\t,\\ found on map", 2));
 	if (!surrounded_by_walls(game))
-		return (ft_putendl_fd_0("Error: The map needs to be closed", 2));
+		return (0);
 	return (1);
 }
