@@ -1,13 +1,13 @@
 
 
-NO ./maps/croissant.xpm
+NO ./maps/croiss1ant.xpm
             
             
-SO ./maps/croissant.xpm
+SO ./maps/croiss2ant.xpm
         
-WE ./maps/croissant.xpm
+WE ./maps/croiss3ant.xpm
 
-EA ./maps/croissant.xpm
+EA ./maps/crois4sant.xpm
 
 
 F 100,100,0
@@ -28,4 +28,3 @@ C 225,100,0
 11000001110101011101011010N0111  
 11110111 1110101 101111010001    
 11111111 1111111 111111111111    
-

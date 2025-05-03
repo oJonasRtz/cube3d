@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@42sp.org.br>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/19 19:39:09 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/22 12:59:10 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/05/03 18:25:57 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ static int	check_special_chars(t_game *game)
 {
 	int	index;
 
+	show_textures(game);
 	index = 0;
 	while (game->true_game_map[index] != NULL)
 	{
