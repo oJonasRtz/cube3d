@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/19 10:35:20 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/05/03 18:49:04 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/05/04 10:41:16 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,13 @@ static int	empty_line(char *line)
 
 	index = 0;
 	flag = 0;
+	if (find_texture(line, "NO ", 3)
+		|| find_texture(line, "SO ", 3)
+		|| find_texture(line, "WE ", 3)
+		|| find_texture(line, "EA ", 3)
+		|| find_texture(line, "F ", 2)
+		|| find_texture(line, "C ", 2))
+		return (1);
 	while (line[index] != '\0' && line[index] != '\n' && flag == 0)
 	{
 		if (line[index] != ' ' && line[index] != '\t')
@@ -107,5 +114,5 @@ int	get_true_map(t_game *game)
 		}
 		index++;
 	}
-	return (1);
+	return (0);
 }
