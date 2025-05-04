@@ -27,17 +27,16 @@ static void	free_map_copy(char **map)
 
 static void	start_test_flood_fill(char **map, int x, int y, t_game *game)
 {
-	if (x < 0 || x >= game->width_map || y < 0 || y >= game->heigth_map)
+	if (y < 0 || y >= game->heigth_map || x < 0 || x >= (int)ft_strlen(map[y]))
 		return ;
-	if (map[y][x] == '1' || map[y][x] == 'V' || map[y][x] == ' '
-		|| map[y][x] == '\t')
+	if (map[y][x] == '1' || map[y][x] == 'V')
+		return ;
+	if (map[y][x] == ' ' || map[y][x] == '\t')
 	{
-		if (map[y][x] == ' ' || map[y][x] == '\t')
-			game->invalid_map = 1;
+		game->invalid_map = 1;
 		return ;
 	}
-	if (map[y][x] != '1' && map[y][x] != 'V')
-		map[y][x] = 'V';
+	map[y][x] = 'V';
 	start_test_flood_fill(map, x + 1, y, game);
 	start_test_flood_fill(map, x - 1, y, game);
 	start_test_flood_fill(map, x, y + 1, game);
