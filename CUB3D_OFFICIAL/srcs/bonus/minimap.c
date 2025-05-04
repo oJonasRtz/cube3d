@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 10:04:13 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/29 11:58:13 by jonas            ###   ########.fr       */
+/*   Updated: 2025/05/04 15:18:44 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@ static void	show_the_art_to_godness(t_game *game, int s_y, int s_x, int c)
 {
 	int	y;
 	int	x;
+	int	dx;
+	int	dy;
 
-	s_y *= TILE_SIZE;
-	s_x *= TILE_SIZE;
-	s_y -= game->offset_y;
-	s_x -= game->offset_x;
+	dx = game->origin_x + (int)((s_y * TILE_SIZE - game->world_x) * MINIMAP_SCALE);
+	dy = game->origin_y + (int)((s_x * TILE_SIZE - game->world_y) * MINIMAP_SCALE);
 	y = 0;
 	while (y < TILE_SIZE)
 	{
@@ -28,12 +28,21 @@ static void	show_the_art_to_godness(t_game *game, int s_y, int s_x, int c)
 		while (x < TILE_SIZE)
 		{
 			mlx_pixel_put(game->mlx.mlx_ptr, game->mlx.win,
-				(s_x + x) * MINIMAP_SCALE, (s_y + y)
+				(dx + x) * MINIMAP_SCALE, (dy + y)
 				* MINIMAP_SCALE, c);
 			x++;
 		}
 		y++;
 	}
+}
+
+static void	init_player_location(t_game *game)
+{
+	game->center_y = game->origin_x + (game->minimap_w * TILE_SIZE) / 2;
+	game->center_x = game->origin_y + (game->minimap_h * TILE_SIZE) / 2;
+	game->player_size = TILE_SIZE / 4 * MINIMAP_SCALE;
+	game->start_x = game->center_x - game->player_size / 2;
+	game->start_y = game->center_y - game->player_size / 2;
 }
 
 static void	draw_the_player(t_game *game)
@@ -43,6 +52,7 @@ static void	draw_the_player(t_game *game)
 	int	x;
 	int	y;
 
+	init_player_location(game);
 	new_player_x_location = ((game->width / 2)
 			- (TILE_SIZE / 4)) * MINIMAP_SCALE;
 	new_player_y_location = ((game->heigth / 2)
@@ -64,6 +74,16 @@ static void	draw_the_player(t_game *game)
 	draw_fov(game);
 }
 
+static void	init_location_variables(t_game *game)
+{
+	game->minimap_w = game->width_map * TILE_SIZE;
+	game->minimap_h = game->heigth_map * TILE_SIZE;
+	game->origin_x = game->width - game->minimap_w * MINIMAP_SCALE;
+	game->origin_y = 0;
+	game->world_x = game->player_x * TILE_SIZE - (game->minimap_w / 2.0);
+	game->world_y = game->player_y * TILE_SIZE - (game->minimap_h / 2.0);
+}
+
 void	minimap(t_game *game)
 {
 	int		index;
@@ -71,6 +91,7 @@ void	minimap(t_game *game)
 	int		color;
 	char	c;
 
+	init_location_variables(game);
 	index = 0;
 	while (game->true_game_map[index] != NULL)
 	{
