@@ -51,5 +51,6 @@ void	move_w(t_game *game);
 void	move_s(t_game *game);
 void	move_d(t_game *game);
 void	get_plane_x_y(t_game *game);
+int		find_texture(char *high, char *little, int i);
 
 #endif /* CUB3D_H */
