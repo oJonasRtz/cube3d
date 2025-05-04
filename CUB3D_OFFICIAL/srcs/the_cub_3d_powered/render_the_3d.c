@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 12:09:42 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/05/04 12:01:41 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/05/04 17:03:55 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,8 @@ void	render_the_3d(t_game *game)
 		init_dda_params(game, px, py);
 		dda_loop(game);
 		calculate_perp_dist_update_wall(game, px, py);
-		game->draw_3d_center_s = game->dda.drawstart;
-		game->draw_3d_center_e = game->dda.drawend;
+		game->draw_3d_center_s = game->dda.drawstart + game->pitch;
+		game->draw_3d_center_e = game->dda.drawend + game->pitch;
 		draw_ceiling(game, x);
 		draw_column(game, x);
 		draw_floor(game, x);

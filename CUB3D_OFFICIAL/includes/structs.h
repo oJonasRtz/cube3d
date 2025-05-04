@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 12:55:55 by jopereir          #+#    #+#             */
-/*   Updated: 2025/05/04 15:17:42 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/05/04 17:18:21 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,17 +102,18 @@ typedef struct s_game
 	int		endian_so;
 	int		endian_we;
 	int		endian_ea;
+	int		pitch;
 	int		minimap_w;
 	int		minimap_h;
-	double		origin_x;
-	double		origin_y;
-	double		world_x;
-	double		world_y;
-	double		center_y;
-	double		center_x;
-	double		player_size;
-	double		start_x;
-	double		start_y;
+	double	origin_x;
+	double	origin_y;
+	double	world_x;
+	double	world_y;
+	double	center_y;
+	double	center_x;
+	double	player_size;
+	double	start_x;
+	double	start_y;
 	double	plane_x;
 	double	plane_y;
 	char	*no_texture;

@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 18:31:34 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/05/02 18:34:19 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/05/04 17:10:14 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@
 # define MOVE_SPEED 20
 # define ROTATION_SPEED 0.1
 # define VISUAL_CAMP 0.8
+# define PITCH_STEP 20
 
 int		destroy(t_game *game);
 int		get_width_heigth(t_game *game);
