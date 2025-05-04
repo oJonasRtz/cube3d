@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 12:09:42 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/05/02 18:55:38 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/05/04 12:01:41 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,34 +21,6 @@ static void	new_position_px_py(t_game *g, double *px, double *py)
 	g->dir_get_x = cos(g->angle_k);
 	g->dir_get_y = sin(g->angle_k);
 }
-/*
-static void	get_radius(t_game *game)
-{
-	double	px;
-	int		map_x;
-	int		map_y;
-	double	py;
-	double	step;
-
-	new_position_px_py(game, &px, &py, &step);
-	while (1)
-	{
-		map_x = px / TILE_SIZE;
-		map_y = py / TILE_SIZE;
-		if (px < 0 || py < 0 || map_y >= game->heigth_map
-			|| map_x >= (int)ft_strlen(game->true_game_map[map_y]))
-			break ;
-		if (game->true_game_map[map_y][map_x] == '1'
-			|| game->true_game_map[map_y][map_x] == ' ')
-			break ;
-		px += game->dir_get_x * step;
-		py += game->dir_get_y * step;
-	}
-	game->target_x = map_x;
-	game->dir_x_c = px - game->px_start;
-	game->dir_y_c = py - game->py_start;
-	get_distance(game, 4);
-}*/
 
 static void	draw_column(t_game *game, int x)
 {
