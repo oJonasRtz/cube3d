@@ -23,7 +23,6 @@ int	find_texture(char *high, char *little, int i)
 		find = ft_strnstr(high, little, ft_strlen(high));
 		if (find != NULL)
 		{
-			printf("find: %s\n", find);
 			if (ft_strncmp(find, little, i) == 0)
 				return (1);
 		}
