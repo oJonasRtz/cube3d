@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   calculate_perp_dist_update_wall.c                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 16:47:44 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/05/02 18:54:56 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/05/05 15:52:44 by jonas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,7 @@ void	calculate_perp_dist_update_wall(t_game *game, double px, double py)
 	game->dda.drawend = game->dda.lineheight / 2 + game->heigth / 2;
 	if (game->dda.drawend >= game->heigth)
 		game->dda.drawend = game->heigth - 1;
+	game->dda.perpwalldist = perp_dist;
+	game->dda.px = px;
+	game->dda.py = py;
 }

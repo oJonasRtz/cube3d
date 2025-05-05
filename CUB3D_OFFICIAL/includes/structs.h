@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 12:55:55 by jopereir          #+#    #+#             */
-/*   Updated: 2025/05/05 01:47:29 by jonas            ###   ########.fr       */
+/*   Updated: 2025/05/05 15:51:44 by jonas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,9 @@ typedef struct s_dda
 	double	deltadisty;
 	int		stepx;
 	int		stepy;
+	double	px;
+	double	py;
+	double	perpwalldist;
 	double	sidedistx;
 	double	sidedisty;
 }	t_dda;
