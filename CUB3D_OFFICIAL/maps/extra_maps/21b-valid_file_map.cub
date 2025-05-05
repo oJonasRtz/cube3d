@@ -1,7 +1,7 @@
-NO ./assets/wall/brick-1l.xpm
-SO ./assets/wall/brick-2l.xpm
-WE ./assets/wall/brick-2d.xpm
-EA ./assets/wall/brick-1d.xpm
+NO ./images/wall.xpm
+SO ./images/ender64.xpm
+WE ./images/blue.xpm
+EA ./images/white.xpm
 
 C 238,245,255
 F 210,227,200

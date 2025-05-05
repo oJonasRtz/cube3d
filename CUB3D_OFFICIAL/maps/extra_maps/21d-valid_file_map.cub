@@ -1,13 +1,18 @@
 
 
-NO ./maps/croiss1ant.xpm
-            
-            
-SO ./maps/croiss2ant.xpm
-        
-WE ./maps/croiss3ant.xpm
+NO ./images/wall.xpm
 
-EA ./maps/crois4sant.xpm
+
+SO ./images/ender64.xpm
+WE ./images/blue.xpm
+
+
+
+
+
+
+
+EA ./images/white.xpm
 
 
 F 100,100,0
