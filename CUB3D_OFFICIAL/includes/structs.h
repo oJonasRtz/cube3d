@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   structs.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 12:55:55 by jopereir          #+#    #+#             */
-/*   Updated: 2025/05/04 17:18:21 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/05/05 01:47:29 by jonas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,10 +86,10 @@ typedef struct s_game
 	t_keys	keys;
 	t_dda	dda;
 	t_ray	rays;
-	void	*no_addr;
-	void	*so_addr;
-	void	*ea_addr;
-	void	*we_addr;
+	char	*no_addr;
+	char	*so_addr;
+	char	*ea_addr;
+	char	*we_addr;
 	int		bpp_no;
 	int		bpp_so;
 	int		bpp_we;
