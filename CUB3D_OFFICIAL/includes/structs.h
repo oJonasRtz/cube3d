@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 12:55:55 by jopereir          #+#    #+#             */
-/*   Updated: 2025/05/05 15:51:44 by jonas            ###   ########.fr       */
+/*   Updated: 2025/05/05 17:37:42 by jonas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,15 @@ typedef struct s_keys
 	void	(*f)(t_game*);
 }	t_keys;
 
+typedef struct s_tex
+{
+	char	*addr;
+	int		bpp;
+	int		linelen;
+	int		endian;
+}	t_tex;
+
+
 typedef struct s_game
 {
 	t_mlx	mlx;
@@ -89,22 +98,10 @@ typedef struct s_game
 	t_keys	keys;
 	t_dda	dda;
 	t_ray	rays;
-	char	*no_addr;
-	char	*so_addr;
-	char	*ea_addr;
-	char	*we_addr;
-	int		bpp_no;
-	int		bpp_so;
-	int		bpp_we;
-	int		bpp_ea;
-	int		line_length_no;
-	int		line_length_so;
-	int		line_length_we;
-	int		line_length_ea;
-	int		endian_no;
-	int		endian_so;
-	int		endian_we;
-	int		endian_ea;
+	t_tex	no;
+	t_tex	so;
+	t_tex	ea;
+	t_tex	we;
 	int		pitch;
 	int		minimap_w;
 	int		minimap_h;

@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 15:19:35 by jonas             #+#    #+#             */
-/*   Updated: 2025/05/05 17:22:46 by jonas            ###   ########.fr       */
+/*   Updated: 2025/05/05 17:36:53 by jonas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,9 +53,9 @@ static int	get_tex_y(t_dda *dda, int screen_h, int pitch, int y)
 	return (temp);
 }
 
-static int	get_colour(t_game *game, int tex_x, int tex_y)
+static int	get_colour(t_tex *tex, int tex_x, int tex_y)
 {
-	return (*(int *)(game->no_addr + tex_y * game->line_length_no + tex_x * (game->bpp_no / 8)));
+	return (*(int *)(tex->addr + tex_y * tex->linelen + tex_x * (tex->bpp / 8)));
 }
 
 int get_tex_colour(t_game *game, int y)
@@ -66,6 +66,6 @@ int get_tex_colour(t_game *game, int y)
 
 	tex_x = get_tex_x(&game->dda);
     tex_y = get_tex_y(&game->dda, game->screen_h, game->pitch, y);
-    colour = get_colour(game, tex_x, tex_y);
+    colour = get_colour(&game->ea, tex_x, tex_y);
     return (colour);
 }
