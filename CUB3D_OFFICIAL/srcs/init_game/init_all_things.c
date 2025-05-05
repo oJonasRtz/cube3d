@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 22:54:02 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/05/05 17:32:08 by jonas            ###   ########.fr       */
+/*   Updated: 2025/05/05 20:24:54 by jonas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,14 @@ static void	set_more_things(t_game *game)
 	set_more_more_things(game);
 }
 
+static void	init_mouse(t_game *game)
+{
+	game->mouse.x = 0;
+	game->mouse.y = 0;
+	game->mouse.prev_x = -1;
+	game->mouse.prev_y = -1;
+}
+
 void	init_all_things(t_game *game)
 {
 	game->mlx.mlx_ptr = NULL;
@@ -75,5 +83,6 @@ void	init_all_things(t_game *game)
 	game->floor_colours_index = 0;
 	game->ceiling_colours_index = 0;
 	game->screen_h = 0;
+	init_mouse(game);
 	set_more_things(game);
 }

@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 12:55:55 by jopereir          #+#    #+#             */
-/*   Updated: 2025/05/05 18:42:50 by jonas            ###   ########.fr       */
+/*   Updated: 2025/05/05 20:38:20 by jonas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,14 @@ typedef struct s_tex
 	int		endian;
 }	t_tex;
 
+typedef struct s_mouse
+{
+	int	x;
+	int	y;
+	int	prev_x;
+	int	prev_y;
+}	t_mouse;
+
 typedef struct s_game
 {
 	t_mlx	mlx;
@@ -101,6 +109,7 @@ typedef struct s_game
 	t_tex	so;
 	t_tex	ea;
 	t_tex	we;
+	t_mouse	mouse;
 	int		pitch;
 	int		minimap_w;
 	int		minimap_h;

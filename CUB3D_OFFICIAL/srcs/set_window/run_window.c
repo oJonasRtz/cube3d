@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 13:21:48 by jopereir          #+#    #+#             */
-/*   Updated: 2025/05/04 17:08:39 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/05/05 20:40:18 by jonas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,23 @@ static int	handle_input(int key, t_game *game)
 	return (0);
 }
 
+static int	handle_mouse(int x, int y, t_game *game)
+{
+	int		code;
+	t_mouse	*mouse;
+
+	mouse = &game->mouse;
+	mouse->prev_x = mouse->x;
+	mouse->prev_y = mouse->y;
+	mouse->x = x;
+	mouse->y = y;
+	code = 65361;
+	if (mouse->x > mouse->prev_x)
+		code = 65363;
+	update_angle_dir_x_y(game, code);
+	return (0);
+}
+
 void	run_window(t_game *game)
 {
 	if (!game)
@@ -78,5 +95,6 @@ void	run_window(t_game *game)
 	mlx_hook(game->mlx.win, 17, 0, &destroy, game);
 	mlx_hook(game->mlx.win, 2, 1L << 0, &handle_input, game);
 	mlx_hook(game->mlx.win, 3, 1L << 1, &handle_key_release, NULL);
+	mlx_hook(game->mlx.win, 6, 1L << 6, &handle_mouse, game);
 	mlx_loop(game->mlx.mlx_ptr);
 }
