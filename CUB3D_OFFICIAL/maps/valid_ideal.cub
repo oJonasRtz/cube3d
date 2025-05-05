@@ -2,8 +2,8 @@ NO ./images/wall.xpm
 SO ./images/wall2.xpm
 WE ./images/wall3.xpm
 EA ./images/wall4.xpm
-F 255,0,255
-C 255,0,0
+F 50,10,50
+C 0,0,100
 
  11111 
 1000001

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_game.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jopereir <jopereir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 20:21:08 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/05/03 22:03:38 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/05/05 02:43:16 by jonas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,8 +73,8 @@ int	init_game(const char *filename, t_game *game)
 		return (ft_putendl_fd_0("Error: hole on rrggbb", 2));
 	game->max_col = game->heigth / TILE_SIZE;
 	game->max_row = game->width / TILE_SIZE;
-//	if (!check_and_set_images(game))
-//		return (ft_putendl_fd_0("Error: invalid images", 2));
+	if (!check_and_set_images(game))
+		return (ft_putendl_fd_0("Error: invalid images", 2));
 	set_player_eye_direction(game);
 	get_offset_x_y(game);
 	get_plane_x_y(game);
