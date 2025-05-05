@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 12:09:42 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/05/05 15:22:09 by jonas            ###   ########.fr       */
+/*   Updated: 2025/05/05 18:40:33 by jonas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static void	draw_column(t_game *game, int x)
 {
 	int		y;
 	int		color;
-	
+
 	y = game->draw_3d_center_s;
 	while (y < game->draw_3d_center_e)
 	{

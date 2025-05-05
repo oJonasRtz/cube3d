@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 15:19:35 by jonas             #+#    #+#             */
-/*   Updated: 2025/05/05 18:35:41 by jonas            ###   ########.fr       */
+/*   Updated: 2025/05/05 18:40:24 by jonas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ static int	get_tex_x(t_dda *dda)
 		tex_x = 0;
 	if (tex_x >= TILE_SIZE)
 		tex_x = TILE_SIZE - 1;
-	if ((dda->side == 0 && dda->raydirx > 0) || (dda->side == 1 && dda->raydiry < 0))
+	if ((dda->side == 0 && dda->raydirx > 0)
+		|| (dda->side == 1 && dda->raydiry < 0))
 		tex_x = TILE_SIZE - tex_x - 1;
 	return (tex_x);
 }
@@ -48,7 +49,8 @@ static int	get_tex_y(t_dda *dda, int screen_h, int pitch, int y)
 
 static int	get_colour(t_tex *tex, int tex_x, int tex_y)
 {
-	return (*(int *)(tex->addr + tex_y * tex->linelen + tex_x * (tex->bpp / 8)));
+	return (*(int *)
+		(tex->addr + tex_y * tex->linelen + tex_x * (tex->bpp / 8)));
 }
 
 static t_tex	*get_tex(t_game *game)
@@ -64,7 +66,7 @@ static t_tex	*get_tex(t_game *game)
 	return (&game->so);
 }
 
-int get_tex_colour(t_game *game, int y)
+int	get_tex_colour(t_game *game, int y)
 {
 	int		tex_x;
 	int		tex_y;
@@ -73,7 +75,7 @@ int get_tex_colour(t_game *game, int y)
 
 	tex = get_tex(game);
 	tex_x = get_tex_x(&game->dda);
-    tex_y = get_tex_y(&game->dda, game->screen_h, game->pitch, y);
-    colour = get_colour(tex, tex_x, tex_y);
-    return (colour);
+	tex_y = get_tex_y(&game->dda, game->screen_h, game->pitch, y);
+	colour = get_colour(tex, tex_x, tex_y);
+	return (colour);
 }

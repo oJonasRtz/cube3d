@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 12:55:55 by jopereir          #+#    #+#             */
-/*   Updated: 2025/05/05 17:37:42 by jonas            ###   ########.fr       */
+/*   Updated: 2025/05/05 18:42:50 by jonas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,6 @@ typedef struct s_tex
 	int		linelen;
 	int		endian;
 }	t_tex;
-
 
 typedef struct s_game
 {
