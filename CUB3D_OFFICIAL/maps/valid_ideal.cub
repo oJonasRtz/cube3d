@@ -1,7 +1,11 @@
-NO ./images/wall.xpm
-SO ./images/ender64.xpm
-WE ./images/blue.xpm
-EA ./images/white.xpm
+		NO ./images/block.xpm
+
+SO ./images/ruins.xpm
+
+WE ./images/brickWall.xpm
+
+EA ./images/wall1.xpm
+
 F 50,10,50
 C 0,0,100
 
