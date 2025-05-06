@@ -39,27 +39,10 @@ static int	handle_no_event(t_game *game)
 
 static int	handle_input(int key, t_game *game)
 {
-	int	pitch_max;
-	int	pitch_min;
-
-	pitch_max = (game->heigth / 2) - 1;
-	pitch_min = (-game->heigth / 2) - 1;
 	if (key == 65307)
 		destroy(game);
 	if (key == 65361 || key == 65363)
 		update_angle_dir_x_y(game, key);
-	if (key == 65362)
-	{
-		game->pitch += PITCH_STEP;
-		if (game->pitch > pitch_max)
-			game->pitch = pitch_max;
-	}
-	if (key == 65364)
-	{
-		game->pitch -= PITCH_STEP;
-		if (game->pitch < pitch_min)
-			game->pitch = pitch_min;
-	}
 	get_handle_key(key, 1);
 	return (0);
 }

@@ -40,7 +40,11 @@ void	calculate_perp_dist_update_wall(t_game *game, double px, double py)
 	perp_dist = get_perp_dist(game, px, py);
 	game->dda.lineheight = (int)(game->heigth / perp_dist);
 	game->dda.drawstart = -game->dda.lineheight / 2 + game->heigth / 2;
+	if (game->dda.drawstart < 0)
+		game->dda.drawstart = 0;
 	game->dda.drawend = game->dda.lineheight / 2 + game->heigth / 2;
+	if (game->dda.drawend >= game->heigth - 1)
+		game->dda.drawend = game->heigth - 1;
 	game->dda.perpwalldist = perp_dist;
 	game->dda.px = px;
 	game->dda.py = py;
