@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 13:21:48 by jopereir          #+#    #+#             */
-/*   Updated: 2025/05/05 20:40:18 by jonas            ###   ########.fr       */
+/*   Updated: 2025/05/05 21:52:57 by jonas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,6 @@ static int	handle_input(int key, t_game *game)
 
 static int	handle_mouse(int x, int y, t_game *game)
 {
-	int		code;
 	t_mouse	*mouse;
 
 	mouse = &game->mouse;
@@ -74,10 +73,7 @@ static int	handle_mouse(int x, int y, t_game *game)
 	mouse->prev_y = mouse->y;
 	mouse->x = x;
 	mouse->y = y;
-	code = 65361;
-	if (mouse->x > mouse->prev_x)
-		code = 65363;
-	update_angle_dir_x_y(game, code);
+	update_angle_mouse(game, mouse);
 	return (0);
 }
 
