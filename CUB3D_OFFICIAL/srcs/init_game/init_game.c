@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 20:21:08 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/05/05 02:43:16 by jonas            ###   ########.fr       */
+/*   Updated: 2025/05/06 18:02:06 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,10 @@ static void	set_player_eye_direction(t_game *game)
 
 static void	get_offset_x_y(t_game *game)
 {
-	game->offset_x = game->player_x * TILE_SIZE - (game->width / 2);
-	game->offset_y = game->player_y * TILE_SIZE - (game->heigth / 2);
+	game->offset_x = game->player_x * TILE_SIZE
+		+ TILE_SIZE / 2 - (game->width / 2);
+	game->offset_y = game->player_y * TILE_SIZE
+		+ TILE_SIZE / 2 - (game->heigth / 2);
 }
 
 int	init_game(const char *filename, t_game *game)

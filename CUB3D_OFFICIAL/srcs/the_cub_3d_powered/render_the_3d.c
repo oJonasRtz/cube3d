@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 12:09:42 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/05/05 21:01:32 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/05/06 18:08:11 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static void	new_position_px_py(t_game *g, double *px, double *py)
 {
 	*px = (g->width / 2) + g->offset_x;
-	*py = (g->heigth / 2) + g->offset_y + (TILE_SIZE * 0.10);
+	*py = (g->heigth / 2) + g->offset_y;
 	g->px_start = *px;
 	g->py_start = *py;
 	g->dir_get_x = cos(g->angle_k);
