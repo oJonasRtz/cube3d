@@ -1,12 +1,18 @@
-NO ./images/n.xpm
+		NO ./images/block.xpm
 
-SO ./images/s.xpm
-
-WE ./images/w.xpm
+SO ./images/ruins.xpm
 
 
-EA ./images/e.xpm
 
+
+
+WE ./images/brickWall.xpm
+
+
+
+
+
+EA ./images/wall1.xpm
 
 
 
