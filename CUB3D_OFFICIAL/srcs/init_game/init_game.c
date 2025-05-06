@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 20:21:08 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/05/06 18:02:06 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/05/06 19:20:42 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,11 +62,16 @@ int	init_game(const char *filename, t_game *game)
 {
 	init_all_things(game);
 	game->maps = get_map(filename);
+	game->mlx.mlx_ptr = mlx_init();
+	if (!game->mlx.mlx_ptr)
+		return (drawstr("Error: mlx error\n", 2, 1));
 	if (!game->maps || !check_security_on_map(game)
 		|| !get_map_textures(game))
 		return (0);
 	if (!is_valid_map(game))
 		return (0);
+	if (!check_and_set_images(game))
+		return (ft_putendl_fd_0("Error: invalid images", 2));
 	if (!get_width_heigth(game))
 		return (0);
 	if (!rgb_to_rrggbb(game))
@@ -75,8 +80,6 @@ int	init_game(const char *filename, t_game *game)
 		return (ft_putendl_fd_0("Error: hole on rrggbb", 2));
 	game->max_col = game->heigth / TILE_SIZE;
 	game->max_row = game->width / TILE_SIZE;
-	if (!check_and_set_images(game))
-		return (ft_putendl_fd_0("Error: invalid images", 2));
 	set_player_eye_direction(game);
 	get_offset_x_y(game);
 	get_plane_x_y(game);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   render_the_3d.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 12:09:42 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/05/04 17:03:55 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/05/06 18:08:11 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,24 @@ static void	new_position_px_py(t_game *g, double *px, double *py)
 	g->dir_get_y = sin(g->angle_k);
 }
 
+static int	aplly_shadow(int colour, int side)
+{
+	if (side == 1)
+		return ((colour >> 1) & 0x7F7F7F);
+	return (colour);
+}
+
 static void	draw_column(t_game *game, int x)
 {
-	int	y;
+	int		y;
+	int		color;
 
 	y = game->draw_3d_center_s;
 	while (y < game->draw_3d_center_e)
 	{
-		mlx_pixel_put(game->mlx.mlx_ptr, game->mlx.win,
-			x, y, COLOUR_DEFAULT);
+		color = get_tex_colour(game, y);
+		color = aplly_shadow(color, game->dda.side);
+		mlx_pixel_put(game->mlx.mlx_ptr, game->mlx.win, x, y, color);
 		y++;
 	}
 }

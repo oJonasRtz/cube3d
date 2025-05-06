@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 18:31:34 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/05/04 17:10:14 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/05/05 21:38:31 by jonas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,5 +53,6 @@ void	move_s(t_game *game);
 void	move_d(t_game *game);
 void	get_plane_x_y(t_game *game);
 int		find_texture(char *high, char *little, int i);
+void	update_angle_mouse(t_game *game, t_mouse *mouse);
 
 #endif /* CUB3D_H */

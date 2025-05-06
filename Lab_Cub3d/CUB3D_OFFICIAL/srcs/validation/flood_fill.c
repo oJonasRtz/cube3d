@@ -6,13 +6,13 @@
 /*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/20 19:50:38 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/05/03 18:57:08 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/05/05 20:16:00 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/cub3d.h"
 
-static void	free_map_copy(char **map)
+static int	free_map_copy(char **map, int flag)
 {
 	int	index;
 
@@ -23,6 +23,9 @@ static void	free_map_copy(char **map)
 		index++;
 	}
 	free(map);
+	if (flag == 1)
+		return (ft_putendl_fd_0("Error: The player met Hole", 2));
+	return (1);
 }
 
 static void	start_test_flood_fill(char **map, int x, int y, t_game *game)
@@ -83,16 +86,27 @@ static char	**get_map_copy(t_game *game)
 int	flood_fill(t_game *game)
 {
 	char	**map_copy;
+	int		i;
+	int		c;
 
 	map_copy = get_map_copy(game);
 	if (!map_copy)
 		return (0);
-	start_test_flood_fill(map_copy, game->player_x, game->player_y, game);
-	if (game->invalid_map == 1)
+	i = 0;
+	while (map_copy[i] != NULL)
 	{
-		free_map_copy(map_copy);
-		return (ft_putendl_fd_0("Error: The player met Hole", 2));
+		c = 0;
+		while (map_copy[i][c] != '\n' && map_copy[i][c] != '\0')
+		{
+			if (map_copy[i][c] == '0' || map_copy[i][c] == 'N'
+				|| map_copy[i][c] == 'W' || map_copy[i][c] == 'S'
+				|| map_copy[i][c] == 'E')
+				start_test_flood_fill(map_copy, i, c, game);
+			if (game->invalid_map == 1)
+				return (free_map_copy(map_copy, 1));
+			c++;
+		}
+		i++;
 	}
-	free_map_copy(map_copy);
-	return (1);
+	return (free_map_copy(map_copy, 0));
 }

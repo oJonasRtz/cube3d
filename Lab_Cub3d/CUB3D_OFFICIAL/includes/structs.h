@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   structs.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 12:55:55 by jopereir          #+#    #+#             */
-/*   Updated: 2025/05/04 17:18:21 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/05/05 20:38:20 by jonas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,9 @@ typedef struct s_dda
 	double	deltadisty;
 	int		stepx;
 	int		stepy;
+	double	px;
+	double	py;
+	double	perpwalldist;
 	double	sidedistx;
 	double	sidedisty;
 }	t_dda;
@@ -79,6 +82,22 @@ typedef struct s_keys
 	void	(*f)(t_game*);
 }	t_keys;
 
+typedef struct s_tex
+{
+	char	*addr;
+	int		bpp;
+	int		linelen;
+	int		endian;
+}	t_tex;
+
+typedef struct s_mouse
+{
+	int	x;
+	int	y;
+	int	prev_x;
+	int	prev_y;
+}	t_mouse;
+
 typedef struct s_game
 {
 	t_mlx	mlx;
@@ -86,22 +105,11 @@ typedef struct s_game
 	t_keys	keys;
 	t_dda	dda;
 	t_ray	rays;
-	void	*no_addr;
-	void	*so_addr;
-	void	*ea_addr;
-	void	*we_addr;
-	int		bpp_no;
-	int		bpp_so;
-	int		bpp_we;
-	int		bpp_ea;
-	int		line_length_no;
-	int		line_length_so;
-	int		line_length_we;
-	int		line_length_ea;
-	int		endian_no;
-	int		endian_so;
-	int		endian_we;
-	int		endian_ea;
+	t_tex	no;
+	t_tex	so;
+	t_tex	ea;
+	t_tex	we;
+	t_mouse	mouse;
 	int		pitch;
 	int		minimap_w;
 	int		minimap_h;

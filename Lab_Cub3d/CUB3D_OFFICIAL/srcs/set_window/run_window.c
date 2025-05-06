@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 13:21:48 by jopereir          #+#    #+#             */
-/*   Updated: 2025/05/04 17:08:39 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/05/05 21:52:57 by jonas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,28 +39,24 @@ static int	handle_no_event(t_game *game)
 
 static int	handle_input(int key, t_game *game)
 {
-	int	pitch_max;
-	int	pitch_min;
-
-	pitch_max = (game->heigth / 2) - 1;
-	pitch_min = (-game->heigth / 2) - 1;
 	if (key == 65307)
 		destroy(game);
 	if (key == 65361 || key == 65363)
 		update_angle_dir_x_y(game, key);
-	if (key == 65362)
-	{
-		game->pitch += PITCH_STEP;
-		if (game->pitch > pitch_max)
-			game->pitch = pitch_max;
-	}
-	if (key == 65364)
-	{
-		game->pitch -= PITCH_STEP;
-		if (game->pitch < pitch_min)
-			game->pitch = pitch_min;
-	}
 	get_handle_key(key, 1);
+	return (0);
+}
+
+static int	handle_mouse(int x, int y, t_game *game)
+{
+	t_mouse	*mouse;
+
+	mouse = &game->mouse;
+	mouse->prev_x = mouse->x;
+	mouse->prev_y = mouse->y;
+	mouse->x = x;
+	mouse->y = y;
+	update_angle_mouse(game, mouse);
 	return (0);
 }
 
@@ -78,5 +74,6 @@ void	run_window(t_game *game)
 	mlx_hook(game->mlx.win, 17, 0, &destroy, game);
 	mlx_hook(game->mlx.win, 2, 1L << 0, &handle_input, game);
 	mlx_hook(game->mlx.win, 3, 1L << 1, &handle_key_release, NULL);
+	mlx_hook(game->mlx.win, 6, 1L << 6, &handle_mouse, game);
 	mlx_loop(game->mlx.mlx_ptr);
 }

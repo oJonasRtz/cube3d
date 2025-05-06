@@ -25,6 +25,7 @@ SRCS =  $(SRCDIR)/cub3d/main.c\
 	$(SRCDIR)/validation/check_cub.c\
 	$(SRCDIR)/init_game/init_game.c\
 	$(SRCDIR)/init_game/get_map.c\
+	$(SRCDIR)/the_cub_3d_powered/get_tex_colour.c\
 	$(SRCDIR)/free_game/free_game.c\
 	$(SRCDIR)/init_game/init_all_things.c\
 	$(SRCDIR)/init_game/get_map_textures.c\
@@ -96,6 +97,7 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	@$(MAKE) -C $(LIBFT_DIR) --no-print-directory
+	@$(MAKE) -C $(MLXDIR) --no-print-directory
 	@$(CC) $(CFLAGS) -I $(INCDIR) -I $(MLXDIR) -o $(NAME) $(OBJS) $(MLXFLAGS) $(LIBFT)
 
 # .c -> .o
