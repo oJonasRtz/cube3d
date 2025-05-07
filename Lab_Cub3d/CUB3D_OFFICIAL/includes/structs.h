@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 12:55:55 by jopereir          #+#    #+#             */
-/*   Updated: 2025/05/05 20:38:20 by jonas            ###   ########.fr       */
+/*   Updated: 2025/05/07 14:58:09 by jonas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,10 +92,11 @@ typedef struct s_tex
 
 typedef struct s_mouse
 {
-	int	x;
-	int	y;
-	int	prev_x;
-	int	prev_y;
+	int		x;
+	int		y;
+	int		prev_x;
+	int		prev_y;
+	void	*target;
 }	t_mouse;
 
 typedef struct s_game

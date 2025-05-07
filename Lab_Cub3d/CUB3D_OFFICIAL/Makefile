@@ -81,8 +81,11 @@ SRCS =  $(SRCDIR)/cub3d/main.c\
 	$(SRCDIR)/dda/dda_loop.c\
 	$(SRCDIR)/dda/init_camera_plane.c\
 	$(SRCDIR)/dda/init_dda_params.c\
+	$(SRCDIR)/set_window/mouse.c\
 	$(SRCDIR)/dda/init_ray.c\
 	$(SRCDIR)/cub3d/destroy.c\
+	$(SRCDIR)/utils/get_sign.c\
+	$(SRCDIR)/utils/fps_control.c\
 	$(SRCDIR)/init_game/find_texture.c
 
 #OBJS

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 18:29:29 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/05/04 11:38:14 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/05/07 16:04:38 by jonas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ int	main(int argc, char **argv)
 	game = get_t_game();
 	if (!init_game(argv[1], game))
 		destroy(game);
+	mlx_mouse_hide(game->mlx.mlx_ptr, game->mlx.win);
 	show_textures(game);
 	run_window(game);
 	return (destroy(game));

@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 18:31:34 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/05/05 21:38:31 by jonas            ###   ########.fr       */
+/*   Updated: 2025/05/07 15:49:40 by jonas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
 # include "window.h"
 # include "ray_cast.h"
 # include "dda.h"
+# include "mouse.h"
 
 # define COLOUR_FLOOR 0xff0000
 # define COLOUR_WALL 0xFFD700
@@ -30,7 +31,7 @@
 # define COLOUR_DEFAULT 0x228Bff
 # define COLOUR_RADIUS 0x0000ff
 # define MINIMAP_SCALE 0.5
-# define MOVE_SPEED 20
+# define MOVE_SPEED 10
 # define ROTATION_SPEED 0.1
 # define VISUAL_CAMP 0.8
 # define PITCH_STEP 20
@@ -54,5 +55,6 @@ void	move_d(t_game *game);
 void	get_plane_x_y(t_game *game);
 int		find_texture(char *high, char *little, int i);
 void	update_angle_mouse(t_game *game, t_mouse *mouse);
+void	fps_control(t_game *game);
 
 #endif /* CUB3D_H */
