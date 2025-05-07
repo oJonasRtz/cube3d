@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 13:21:48 by jopereir          #+#    #+#             */
-/*   Updated: 2025/05/07 14:46:18 by jonas            ###   ########.fr       */
+/*   Updated: 2025/05/07 15:48:27 by jonas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static int	handle_no_event(t_game *game)
 	key = get_handle_key(0, 0);
 	game->min_row = game->offset_y / TILE_SIZE;
 	game->min_col = game->offset_x / TILE_SIZE;
-	render_the_3d(game);
+	fps_control(game);
 	keys = get_keys();
 	i = -1;
 	while (++i < 4)

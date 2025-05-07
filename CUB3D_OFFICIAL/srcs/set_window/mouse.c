@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/07 14:42:49 by jonas             #+#    #+#             */
-/*   Updated: 2025/05/07 15:35:46 by jonas            ###   ########.fr       */
+/*   Updated: 2025/05/07 15:49:09 by jonas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static double	set_sensability(t_mouse *mouse, t_game *game)
 	if (abs(mouse->x - game->width / 2) > 2)
 		mlx_mouse_move(game->mlx.mlx_ptr,
 			game->mlx.win, game->width / 2, game->heigth / 2);
-	return ((mouse->x - mouse->prev_x) * 0.0001);
+	return ((mouse->x - mouse->prev_x) * 0.00001);
 }
 
 void	update_angle_mouse(t_game *game, t_mouse *mouse)
