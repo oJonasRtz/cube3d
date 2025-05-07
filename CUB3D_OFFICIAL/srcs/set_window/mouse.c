@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/07 14:42:49 by jonas             #+#    #+#             */
-/*   Updated: 2025/05/07 15:18:16 by jonas            ###   ########.fr       */
+/*   Updated: 2025/05/07 15:22:35 by jonas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ static double	set_sensability(t_mouse *mouse, t_game *game)
 		mouse->prev_x = game->width / 2;
 	else
 		mouse->prev_x = mouse->x;
+	mlx_mouse_move(game->mlx.mlx_ptr, game->mlx.win, game->width / 2, game->heigth / 2);
 	return ((mouse->x - mouse->prev_x) * 0.01);
 }
 
