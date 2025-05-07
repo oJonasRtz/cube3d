@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 15:10:07 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/05/03 22:03:03 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/05/07 14:39:55 by jonas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ int	get_width_heigth(t_game *game)
 	if (set_window(&game->mlx))
 		return (0);
 	mlx_get_screen_size(game->mlx.mlx_ptr, &game->screen_w, &game->screen_h);
-	game->heigth = game->screen_h;
-	game->width = game->screen_w;
+	game->heigth = 1080;
+	game->width = 1920;
 	return (1);
 }

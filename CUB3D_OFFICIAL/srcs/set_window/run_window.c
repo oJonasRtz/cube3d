@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 13:21:48 by jopereir          #+#    #+#             */
-/*   Updated: 2025/05/05 21:52:57 by jonas            ###   ########.fr       */
+/*   Updated: 2025/05/07 14:46:18 by jonas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,10 +52,7 @@ static int	handle_mouse(int x, int y, t_game *game)
 	t_mouse	*mouse;
 
 	mouse = &game->mouse;
-	mouse->prev_x = mouse->x;
-	mouse->prev_y = mouse->y;
-	mouse->x = x;
-	mouse->y = y;
+	fill_struct(mouse, x, y);
 	update_angle_mouse(game, mouse);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 12:55:55 by jopereir          #+#    #+#             */
-/*   Updated: 2025/05/05 20:38:20 by jonas            ###   ########.fr       */
+/*   Updated: 2025/05/07 14:26:18 by jonas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,6 +107,7 @@ typedef struct s_game
 	t_ray	rays;
 	t_tex	no;
 	t_tex	so;
+	void	*target;
 	t_tex	ea;
 	t_tex	we;
 	t_mouse	mouse;

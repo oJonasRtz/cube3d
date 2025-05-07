@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 18:31:34 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/05/05 21:38:31 by jonas            ###   ########.fr       */
+/*   Updated: 2025/05/07 14:45:03 by jonas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
 # include "window.h"
 # include "ray_cast.h"
 # include "dda.h"
+# include "mouse.h"
 
 # define COLOUR_FLOOR 0xff0000
 # define COLOUR_WALL 0xFFD700
