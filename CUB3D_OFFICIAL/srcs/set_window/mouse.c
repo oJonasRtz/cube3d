@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/07 14:42:49 by jonas             #+#    #+#             */
-/*   Updated: 2025/05/07 15:22:35 by jonas            ###   ########.fr       */
+/*   Updated: 2025/05/07 15:26:16 by jonas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,9 @@ static double	set_sensability(t_mouse *mouse, t_game *game)
 		mouse->prev_x = game->width / 2;
 	else
 		mouse->prev_x = mouse->x;
-	mlx_mouse_move(game->mlx.mlx_ptr, game->mlx.win, game->width / 2, game->heigth / 2);
-	return ((mouse->x - mouse->prev_x) * 0.01);
+	mlx_mouse_move(game->mlx.mlx_ptr,
+		game->mlx.win, game->width / 2, game->heigth / 2);
+	return ((mouse->x - mouse->prev_x) * 0.0001);
 }
 
 void	update_angle_mouse(t_game *game, t_mouse *mouse)
@@ -59,6 +60,7 @@ void	draw_mouse_target(t_mlx *mlx, t_mouse *mouse, int width, int height)
 {
 	if (!mouse->target)
 		return ;
+	// mlx_mouse_hide(mlx->mlx_ptr, mlx->win);
 	mlx_put_image_to_window(mlx->mlx_ptr, mlx->win,
 		mouse->target, width / 2, height / 2);
 }
