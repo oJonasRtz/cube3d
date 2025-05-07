@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 12:09:42 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/05/07 15:00:16 by jonas            ###   ########.fr       */
+/*   Updated: 2025/05/07 15:33:14 by jonas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ void	render_the_3d(t_game *game)
 	double		py;
 
 	init_camera_plane(game);
+	mlx_mouse_hide(game->mlx.mlx_ptr, game->mlx.win);
 	x = 0;
 	while (x < game->width)
 	{
