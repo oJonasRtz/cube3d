@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/20 19:50:38 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/05/05 20:16:00 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/05/07 19:11:46 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,10 @@ static int	free_map_copy(char **map, int flag)
 static void	start_test_flood_fill(char **map, int x, int y, t_game *game)
 {
 	if (y < 0 || y >= game->heigth_map || x < 0 || x >= (int)ft_strlen(map[y]))
+	{
+		game->invalid_map = 1;
 		return ;
+	}
 	if (map[y][x] == '1' || map[y][x] == 'V')
 		return ;
 	if (map[y][x] == ' ' || map[y][x] == '\t')
@@ -101,7 +104,7 @@ int	flood_fill(t_game *game)
 			if (map_copy[i][c] == '0' || map_copy[i][c] == 'N'
 				|| map_copy[i][c] == 'W' || map_copy[i][c] == 'S'
 				|| map_copy[i][c] == 'E')
-				start_test_flood_fill(map_copy, i, c, game);
+				start_test_flood_fill(map_copy, c, i, game);
 			if (game->invalid_map == 1)
 				return (free_map_copy(map_copy, 1));
 			c++;
