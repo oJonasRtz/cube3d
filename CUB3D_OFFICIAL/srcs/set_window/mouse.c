@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/07 14:42:49 by jonas             #+#    #+#             */
-/*   Updated: 2025/05/07 14:46:49 by jonas            ###   ########.fr       */
+/*   Updated: 2025/05/07 15:05:30 by jonas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,13 +39,19 @@ void	update_angle_mouse(t_game *game, t_mouse *mouse)
 	get_plane_x_y(game);
 }
 
-void	draw_mouse_target(t_game *game)
+void	*get_target(t_mlx *mlx)
 {
-	t_mlx	*mlx;
+	int	h;
+	int	w;
 
-	if (!game->target)
+	return (mlx_xpm_file_to_image(mlx->mlx_ptr,
+			"./images/MouseTarget3.xpm", &w, &h));
+}
+
+void	draw_mouse_target(t_mlx *mlx, t_mouse *mouse, int width, int height)
+{
+	if (!mouse->target)
 		return ;
-	mlx = &game->mlx;
 	mlx_put_image_to_window(mlx->mlx_ptr, mlx->win,
-		game->target, game->width / 2, game->heigth / 2);
+		mouse->target, width / 2, height / 2);
 }

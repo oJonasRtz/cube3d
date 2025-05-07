@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 12:09:42 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/05/07 14:46:41 by jonas            ###   ########.fr       */
+/*   Updated: 2025/05/07 15:00:16 by jonas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ void	render_the_3d(t_game *game)
 		draw_ceiling(game, x);
 		draw_column(game, x);
 		draw_floor(game, x);
-		draw_mouse_target(game);
+		draw_mouse_target(&game->mlx, &game->mouse, game->width, game->heigth);
 		x++;
 	}
 }

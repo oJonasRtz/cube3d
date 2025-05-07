@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 17:54:50 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/05/07 14:30:57 by jonas            ###   ########.fr       */
+/*   Updated: 2025/05/07 15:00:54 by jonas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,7 @@ int	check_and_set_images(t_game *game)
 			game->ea_texture, &width, &heigth);
 	if (!game->ea_img || width != TILE_SIZE || heigth != TILE_SIZE)
 		return (0);
-	game->target = mlx_xpm_file_to_image(game->mlx.mlx_ptr,
-			"./images/MouseTarget.xpm", &width, &heigth);
+	game->mouse.target = get_target(&game->mlx);
 	if (!get_all_images_addr(game))
 		return (0);
 	return (1);
