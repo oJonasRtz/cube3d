@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/20 19:50:38 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/05/07 19:11:46 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/05/07 19:16:03 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static int	free_map_copy(char **map, int flag)
 	}
 	free(map);
 	if (flag == 1)
-		return (ft_putendl_fd_0("Error: The player met Hole", 2));
+		return (ft_putendl_fd_0("Error: Invalid map flood fill", 2));
 	return (1);
 }
 
