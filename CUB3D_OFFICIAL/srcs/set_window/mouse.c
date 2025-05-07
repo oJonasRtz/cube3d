@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/07 14:42:49 by jonas             #+#    #+#             */
-/*   Updated: 2025/05/07 15:05:30 by jonas            ###   ########.fr       */
+/*   Updated: 2025/05/07 15:18:16 by jonas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,26 @@ void	fill_struct(t_mouse *mouse, int x, int y)
 {
 	if (!mouse)
 		return ;
-	mouse->prev_x = mouse->x;
-	mouse->prev_y = mouse->y;
 	mouse->x = x;
 	mouse->y = y;
 }
 
-static double	set_sensability(t_mouse *mouse)
+static double	set_sensability(t_mouse *mouse, t_game *game)
 {
+	int	dir;
+
+	dir = mouse->x - mouse->prev_x;
+	if ((get_sign(dir) > 0 && mouse->prev_x > game->width / 2)
+		|| (get_sign(dir) < 0 && mouse->prev_x < game->width / 2))
+		mouse->prev_x = game->width / 2;
+	else
+		mouse->prev_x = mouse->x;
 	return ((mouse->x - mouse->prev_x) * 0.01);
 }
 
 void	update_angle_mouse(t_game *game, t_mouse *mouse)
 {
-	game->angle += set_sensability(mouse);
+	game->angle += set_sensability(mouse, game);
 	if (game->angle < 0)
 		game->angle += 2 * M_PI;
 	if (game->angle >= 2 * M_PI)
