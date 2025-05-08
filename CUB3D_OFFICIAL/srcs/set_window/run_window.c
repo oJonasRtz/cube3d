@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/21 13:21:48 by jopereir          #+#    #+#             */
-/*   Updated: 2025/05/07 15:48:27 by jonas            ###   ########.fr       */
+/*   Updated: 2025/05/07 21:13:36 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,8 +61,6 @@ void	run_window(t_game *game)
 {
 	if (!game)
 		return ;
-	ft_printf("Screen Width: %d\n", game->screen_w);
-	ft_printf("Screen Heigth: %d\n", game->screen_h);
 	if (game->width > game->screen_w)
 		game->width = game->screen_w;
 	if (game->heigth > game->screen_h)
