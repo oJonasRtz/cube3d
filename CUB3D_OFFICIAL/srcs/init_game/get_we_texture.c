@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/19 09:45:39 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/05/08 22:08:06 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/05/09 12:20:10 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	get_we_texture(t_game *game)
 	{
 		if (find_texture(game->maps[index], "WE ", 3))
 		{
-			if (find_another(game->maps, index, "WE ", 3))
+			if (find_another(game->maps, index, "WE "))
 				return (0);
 			get_we = ft_split(game->maps[index], ' ');
 			remove_spaces_and_tabs(&get_we);

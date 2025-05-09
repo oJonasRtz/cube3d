@@ -6,7 +6,7 @@
 /*   By: fruan-ba <fruan-ba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 18:31:34 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/05/08 22:10:21 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/05/09 12:19:27 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,6 @@ void	get_plane_x_y(t_game *game);
 int		find_texture(char *high, char *little, int i);
 void	update_angle_mouse(t_game *game, t_mouse *mouse);
 void	fps_control(t_game *game);
-int		find_another(char **map, int index, char *target, int len);
+int		find_another(char **map, int index, char *target);
 
 #endif /* CUB3D_H */
