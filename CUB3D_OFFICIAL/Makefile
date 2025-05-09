@@ -85,6 +85,7 @@ SRCS =  $(SRCDIR)/cub3d/main.c\
 	$(SRCDIR)/cub3d/destroy.c\
 	$(SRCDIR)/utils/get_sign.c\
 	$(SRCDIR)/utils/fps_control.c\
+	$(SRCDIR)/validation/find_another.c\
 	$(SRCDIR)/init_game/find_texture.c
 
 #OBJS
