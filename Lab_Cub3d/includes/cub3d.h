@@ -6,7 +6,7 @@
 /*   By: jonas <jonas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 18:31:34 by fruan-ba          #+#    #+#             */
-/*   Updated: 2025/04/30 11:56:01 by fruan-ba         ###   ########.fr       */
+/*   Updated: 2025/05/25 18:44:36 by fruan-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@
 # define COLOUR_DEFAULT 0x228Bff
 # define COLOUR_RADIUS 0x0000ff
 # define MINIMAP_SCALE 0.5
-# define MOVE_SPEED 10
-# define ROTATION_SPEED 0.05
+# define MOVE_SPEED 18
+# define ROTATION_SPEED 0.08
 # define VISUAL_CAMP 0.8
 
 int		destroy(t_game *game);
