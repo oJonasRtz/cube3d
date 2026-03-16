@@ -179,6 +179,5 @@ flowchart TD
 
 Project contributors (as seen in source headers):
 
-- `jonas`
 - `fruan-ba`
 - `jopereir`
