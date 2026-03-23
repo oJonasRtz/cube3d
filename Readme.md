@@ -518,6 +518,51 @@ C 0,0,100
 
 **Contributors:**
 
+```mermaid
+flowchart TD
+	A[Start: ./cub3d map.cub] --> B{argc >= 2?}
+	B -- No --> X1[Print usage + exit]
+	B -- Yes --> C{file opens and reads?}
+	C -- No --> X2[Error + exit]
+	C -- Yes --> D{extension is .cub?}
+	D -- No --> X3[Error + exit]
+	D -- Yes --> E[load lines into game.maps]
+	E --> F[security checks + parse textures/colors/map]
+	F --> G[validate chars/player/rgb/xpm/flood-fill]
+	G --> H{all checks OK?}
+	H -- No --> X4[Error + cleanup]
+	H -- Yes --> I[init images + camera + player dir]
+	I --> J[enter mlx loop]
+```
+
+### 3) Frame / Render Loop
+
+```mermaid
+flowchart TD
+	A[mlx loop hook] --> B[handle_no_event]
+	B --> C[fps_control]
+	C --> D{frame_skip reached?}
+	D -- No --> Z[return]
+	D -- Yes --> E[render_the_3d]
+	E --> F[for each screen column x]
+	F --> G[init ray + DDA]
+	G --> H[compute wall distance/height]
+	H --> I[draw ceiling]
+	I --> J[draw textured wall slice]
+	J --> K[draw floor]
+	K --> L[draw mouse target]
+	L --> M[minimap and player overlay]
+```
+
+## Debugging Notes
+
+- There is a `make run` target that executes with Valgrind.
+- Sample valid/invalid maps in `CUB3D_OFFICIAL/maps/` are useful to test parser edge cases.
+
+## Authors
+
+Project contributors (as seen in source headers):
+
 - `fruan-ba`
 - `jopereir`
 
