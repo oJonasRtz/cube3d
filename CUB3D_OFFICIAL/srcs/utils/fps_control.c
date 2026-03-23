@@ -38,7 +38,7 @@ void	fps_control(t_game *game, int fps)
 
 	while (elapsed < (1.0 / fps))
 	{
-		usleep(100);
+		usleep(1000);
 		current_time = get_time();
 		elapsed = current_time - last_time;
 	}
