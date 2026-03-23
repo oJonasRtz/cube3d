@@ -23,8 +23,7 @@ void	draw_ceiling(t_game *game, int x)
 		game->draw_3d_center_s = 0;
 	while (y < game->draw_3d_center_s)
 	{
-		mlx_pixel_put(game->mlx.mlx_ptr, game->mlx.win,
-			x, y, colour);
+		put_pixel(&game->frame, x, y, colour);
 		y++;
 	}
 }

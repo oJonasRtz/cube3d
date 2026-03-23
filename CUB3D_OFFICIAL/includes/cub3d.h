@@ -36,6 +36,7 @@
 # define VISUAL_CAMP 0.8
 # define PITCH_STEP 20
 
+void	put_pixel(t_tex *img, int x, int y, int color);
 int		destroy(t_game *game);
 int		get_width_heigth(t_game *game);
 t_game	*get_t_game(void);
@@ -55,7 +56,8 @@ void	move_d(t_game *game);
 void	get_plane_x_y(t_game *game);
 int		find_texture(char *high, char *little, int i);
 void	update_angle_mouse(t_game *game, t_mouse *mouse);
-void	fps_control(t_game *game);
+// void	fps_control(t_game *game);
+void fps_control(t_game *game, int fps);
 int		find_another(char **map, int index, char *target);
 
 #endif /* CUB3D_H */

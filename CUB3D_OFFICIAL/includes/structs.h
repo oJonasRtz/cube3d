@@ -84,6 +84,7 @@ typedef struct s_keys
 
 typedef struct s_tex
 {
+	void	*img;
 	char	*addr;
 	int		bpp;
 	int		linelen;
@@ -110,6 +111,7 @@ typedef struct s_game
 	t_tex	so;
 	t_tex	ea;
 	t_tex	we;
+	t_tex	frame;
 	t_mouse	mouse;
 	int		pitch;
 	int		minimap_w;
@@ -189,6 +191,7 @@ typedef struct s_game
 	int		ceiling_colours_index;
 	char	player_eye;
 }	t_game;
+
 
 int			free_dynamic_texture(char **split);
 int			rgb_to_rrggbb(t_game *game);

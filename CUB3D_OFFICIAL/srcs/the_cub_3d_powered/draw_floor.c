@@ -23,8 +23,7 @@ void	draw_floor(t_game *game, int x)
 	y = game->draw_3d_center_e;
 	while (y < game->heigth)
 	{
-		mlx_pixel_put(game->mlx.mlx_ptr, game->mlx.win,
-			x, y, colour);
+		put_pixel(&game->frame, x, y, colour);
 		y++;
 	}
 }

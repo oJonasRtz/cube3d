@@ -55,6 +55,7 @@ void	move_d(t_game *game);
 void	get_plane_x_y(t_game *game);
 int		find_texture(char *high, char *little, int i);
 void	update_angle_mouse(t_game *game, t_mouse *mouse);
-void	fps_control(t_game *game);
+// void	fps_control(t_game *game);
+void fps_control(t_game *game, int fps);
 
 #endif /* CUB3D_H */

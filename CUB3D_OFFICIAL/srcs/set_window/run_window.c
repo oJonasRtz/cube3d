@@ -28,7 +28,7 @@ static int	handle_no_event(t_game *game)
 	key = get_handle_key(0, 0);
 	game->min_row = game->offset_y / TILE_SIZE;
 	game->min_col = game->offset_x / TILE_SIZE;
-	fps_control(game);
+	fps_control(game, 60);
 	keys = get_keys();
 	i = -1;
 	while (++i < 4)
